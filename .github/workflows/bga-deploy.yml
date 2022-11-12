@@ -16,7 +16,7 @@ jobs:
             - name: FTP-Deploy-Action
               uses: SamKirkland/FTP-Deploy-Action@3.1.1
               with:
-                  ftp-server: ${{ secrets.BGA__FTP_URL }}
+                  ftp-server: ${{ secrets.BGA_FTP_URL }}
                   ftp-username: ${{ secrets.BGA_FTP_USERNAME }}
                   ftp-password: ${{ secrets.BGA_FTP_PASSWORD }}
                   git-ftp-args: --insecure # if your certificate is setup correctly this can be removed (see known-hosts argument)
