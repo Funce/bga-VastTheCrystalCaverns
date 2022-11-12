@@ -1,4 +1,5 @@
 dist/
+build/
 bgaproject.yml
 composer.phar
 /vendor/
