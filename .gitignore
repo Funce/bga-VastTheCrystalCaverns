@@ -1,0 +1,4 @@
+dist/
+bgaproject.yml
+composer.phar
+/vendor/
