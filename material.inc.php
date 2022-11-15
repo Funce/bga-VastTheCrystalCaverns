@@ -55,6 +55,35 @@ $this->tiles = array(
   )
 );
 
+
+/*
+
+  - Card Font Details - 
+
+  Sidequests
+
+  Grit Reward
+    Font - DwarvenAxe BB
+    Colour - rgb(255,255,255)
+    Size - 18
+
+  Title
+    Font - DwarvenAxe BB
+    Colour - rgb(34, 30, 31)
+    Size - 18
+
+
+  Description
+    Font - Noto Serif
+    Colour - rgb(255, 255, 255)
+    Size - 9
+  
+  Quote
+    Font - Noto Serif
+    Colour - rgb(34, 30, 31)
+    Size - 6
+*/
+
 // Knight!
 
 // Sidequests
@@ -216,5 +245,85 @@ $this->monsters = array(
     "ambush_str" => 4,
     "quote" => clienttranslate("Flee fire, foe fum... I smell the blood of a wandering knight.")
   ),
+);
 
+// Secrets!
+$this->secrets = array(
+  "secret_tunnels" => array(
+    "card_name" => clienttranslate("Secret Tunnels"),
+    "description" => array(
+      clienttranslate("During this turn, whenever you activate a revealed Tribe, you may immediately place its piece on any unoccupied Dark tile. If you do so, you cannot move the Tribe by any other effect this turn, but it may still perform its action."),
+    ),
+    "quote" => clienttranslate("Come-along thisaway, sneakylike.")
+  ),
+  "cave_in" => array(
+    "card_name" => clienttranslate("Cave-In"),
+    "description" => array(
+      clienttranslate("Collapse a number of tiles up to the Eye Tribe's Population. You cannot collapse tiles containing other players or Crystal tokens."),
+    ),
+    "quote" => clienttranslate("Whoopsies.")
+  ),
+  "poison" => array(
+    "card_name" => clienttranslate("Poison"),
+    "description" => array(
+      clienttranslate("When a Tribe uses the Attack action against the Knight, she must also place a Hero cube on the Entrance tile. If the Tribe's Strength was greater than the Knight's by two or more, she places 2 Hero cubes instead. She regains these cubes if she enters the Entrance tile.")
+    ),
+    "quote" => clienttranslate("It's an oldtimes family recipe.")
+  ),
+  "leader" => array(
+    "card_name" => clienttranslate("Leader"),
+    "description" => array(
+      clienttranslate("During overpopulation, you may prevent a Tribe from scattering."),
+    ),
+    "quote" => clienttranslate("Followchase me, my Tribegoblins! I'll lead us to dinnertime and the glorious afternap!")
+  ),
+  "goblin_ruby" => array(
+    "card_name" => clienttranslate("Goblin Ruby"),
+    "description" => array(
+      clienttranslate("Place this card face-up on the table."),
+      clienttranslate("<b>-1 Perception (All Tribes)</b>"),
+      clienttranslate("Once per turn, immediately after drawing War, Monster, or Secrets cards, you may discard and redraw one card. Discard <em>Goblin Ruby</em> when any Tribe's Population decreases to 0."),
+    ),
+    "quote" => clienttranslate("Ain't it the prettyshiniest thing you ever did see?")
+  ),
+  "blind_fury" => array(
+    "card_name" => clienttranslate("Blind Fury"),
+    "description" => array(
+      clienttranslate("Pick a Tribe. During this turn, it moves through Lit tiles without losing Population."),
+    ),
+    "quote" => clienttranslate("There's nothing to be fearscared of but light itself!")
+  ),
+  "fire_bomber" => array(
+    "card_name" => clienttranslate("Fire Bomber"),
+    "description" => array(
+      clienttranslate("Pick a Tribe. During this turn, it gets +2 Strength. If it uses the Attack action during this turn, decrease its Population to 0 after resolving."),
+    ),
+    "quote" => clienttranslate("I like it when it goes ticktickticktickticktickBOOM.")
+  ),
+  "hex" => array(
+    "card_name" => clienttranslate("Hex"),
+    "description" => array(
+      clienttranslate("Choose a player to hex. In each effect, <em>X</em> equals the Eye Tribe's Population."),
+      clienttranslate("<b>Knight:</b> Lose <em>X</em> Grit."),
+      clienttranslate("<b>Dragon:</b> Discard <em>X</em> Power cards (<em>Dragon chooses</em>)."),
+      clienttranslate("<b>Cave</b>: Discard <em>X</em> Omen tokens (<em>Cave chooses</em>)."),
+      clienttranslate("<b>Thief:</b> Decrease Stealth by <em>X</em> until the Goblins' next turn."),
+    ),
+    "quote" => clienttranslate("Boil, boil and… yeah just keep boiling.")
+  ),
+  "trap" => array(
+    "card_name" => clienttranslate("Trap"),
+    "description" => array(
+      clienttranslate("Place this card face-up on the table."),
+      clienttranslate("When any Tribe is attacked, it gets +1 Strength and +1 Perception until the attack resolves, then discard this card. When any Tribe is targeted by a Dragon power, you may discard this card to ignore that power."),
+    ),
+    "quote" => clienttranslate("Oh NO, the bigscary KNIGHT is coming! What are we poorwiddle helpless Gobbies gonna doooo?")
+  ),
+  "hiding_spots" => array(
+    "card_name" => clienttranslate("Hiding Spots"),
+    "description" => array(
+      clienttranslate("A hidden Tribe may use the Attack action against the Knight if she is on or adjacent to an Ambush tile. During this action, do not apply any effects from Monster cards or other Secrets cards."),
+    ),
+    "quote" => clienttranslate("Hushquiet! Time for some creepery.")
+  ),
 );
