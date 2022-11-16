@@ -150,6 +150,79 @@ $this->sidequests = array(
   )
 );
 
+// Treasure!
+$this->treasure = array(
+  "javelin" => array(
+    "card_name" => clienttranslate("Javelin"),
+    "description" => array(
+      clienttranslate("When used, your next attack may target the Dragon while he is underground without using a Bomb, and you gain +1 Strength on your next attack. Remove the Javelin from the game after resolving its effects. (<em>Doesn't require a Hero cube to use. Cannot be used on the same turn as a Bomb.</em>)."),
+    ),
+    "quote" => clienttranslate("The favorite weapon of Jodbar the Left-Handed. Believed to be lost forever when Jodbar threw it twelve miles on a dare."),
+    "cube_slots" => 0
+  ),
+  "elvish_sword" => array(
+    "card_name" => clienttranslate("Elvish Sword"),
+    "description" => array(
+      clienttranslate("+1 Perception."),
+      clienttranslate("+1 Strength during your turn only."),
+    ),
+    "quote" => clienttranslate("It appears to be of great antiquity."),
+    "cube_slots" => 1
+  ),
+  "mighty_axe" => array(
+    "card_name" => clienttranslate("Mighty Axe"),
+    "description" => array(
+      clienttranslate("+1 Strength during your turn only."),
+      clienttranslate("When attacking the Dragon, you may discard the Hero cube on this card to remove another Health. (<em>Cannot be used with a Bomb. Place the discarded cube on the Discarded Hero Cubes space on your player board.</em>)"),
+    ),
+    "quote" => clienttranslate("Carved with sigils of great power, and heavy—strangely heavy..."),
+    "cube_slots" => 1
+  ),
+  "potion_kit" => array(
+    "card_name" => clienttranslate("Potion Kit"),
+    "description" => array(
+      clienttranslate("Discard the Hero cube on this card and remove this card from the game to regain 2 Health. (<em>Place the discarded cube on the Discarded Hero Cubes space on your player board.</em>)"),
+    ),
+    "quote" => clienttranslate("Comes with recipes for healing salve, the Crystal Cavern Cocktail, and lizardnoodle soup."),
+    "cube_slots" => 1
+  ),
+  "heroic_boots" => array(
+    "card_name" => clienttranslate("Heroic Boots"),
+    "description" => array(
+      clienttranslate("+4 Movement."),
+    ),
+    "quote" => clienttranslate("Calen the Swift wore these. It seems now the mystery of her disappearance is solved..."),
+    "cube_slots" => 1
+  ),
+  "pixie_lantern" => array(
+    "card_name" => clienttranslate("Pixie Lantern"),
+    "description" => array(
+      clienttranslate("+1 Movement."),
+      clienttranslate("+1 Perception."),
+    ),
+    "quote" => clienttranslate("It doesn't seem like a good idea to let them out. You know how pixies are."),
+    "cube_slots" => 1
+  ),
+  "pixie_lantern" => array(
+    "card_name" => clienttranslate("Pixie Lantern"),
+    "description" => array(
+      clienttranslate("+1 Movement."),
+      clienttranslate("+1 Perception."),
+    ),
+    "quote" => clienttranslate("It doesn't seem like a good idea to let them out. You know how pixies are."),
+    "cube_slots" => 1
+  ),
+  "enchanted_bow" => array(
+    "card_name" => clienttranslate("Enchanted Bow"),
+    "description" => array(
+      clienttranslate("Shoot the Dragon or Thief up to 5 tiles away in a straight line, even if underground or if there are walls or Dark tiles between. The Dragon chooses and discards Power cards equal in number to your Strength - 1 (Max: 3). The Thief is killed if your Perception is greater than his Stealth. (<em>May be used before, during, or after movement.</em>)"),
+    ),
+    "quote" => clienttranslate("Made from the bones of some ancient creature. Oddly warm to the touch."),
+    "cube_slots" => 1
+  ),
+);
+
+
 // Goblins!
 
 // Monsters!
@@ -326,4 +399,6 @@ $this->secrets = array(
     ),
     "quote" => clienttranslate("Hushquiet! Time for some creepery.")
   ),
+
+
 );
