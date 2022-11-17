@@ -222,6 +222,97 @@ $this->treasure = array(
   ),
 );
 
+// Events!
+$this->events = array(
+  "ambush" => array(
+    "card_name" => clienttranslate("Ambush"),
+    "description" => array(
+      "",
+    ),
+    "quote" => array(
+      clienttranslate("A quiet crevice, made for lurking."),
+      clienttranslate("A dark corner, ideal for creeping."),
+      clienttranslate("A large boulder, perfect for skulking."),
+      clienttranslate("A shadowy ledge, great for sneaking."),
+    ),
+    "copies" => 4,
+  ),
+  "light" => array(
+    "card_name" => clienttranslate("Light"),
+    "description" => array(
+      clienttranslate("The Knight may discard a Hero cube to regain 2 Health. (<em>Place the cube on the Discarded Hero Cubes space on the Knight's player board.</em>)"),
+    ),
+    "quote" => array(
+      clienttranslate("A shaft of sunlight from the world above."),
+    ),
+    "copies" => 1,
+  ),
+  "vantage_point" => array(
+    "card_name" => clienttranslate("Vantage Point"),
+    "description" => array(
+      clienttranslate("Reveal all Dark tiles surrounding the Knight. (<em>The revealed tiles are worth Grit as if they had been revealed normally. Place Event tokens on any Event tiles revealed.</em>)"),
+    ),
+    "quote" => array(
+      clienttranslate("A high outcropping with a long, clear view."),
+    ),
+    "copies" => 1,
+  ),
+  "fresh_air" => array(
+    "card_name" => clienttranslate("Fresh Air"),
+    "description" => array(
+      clienttranslate("The Knight may spend a Hero cube to regain 1 Health. She regains the cube on her next turn."),
+    ),
+    "quote" => array(
+      clienttranslate("A breeze, smelling of spring air and growing things."),
+    ),
+    "copies" => 1,
+  ),
+  "fresh_water" => array(
+    "card_name" => clienttranslate("Fresh Water"),
+    "description" => array(
+      clienttranslate("The Knight may spend a Hero cube to regain 1 Health. She regains the cube on her next turn."),
+    ),
+    "quote" => array(
+      clienttranslate("A clear, splashing stream, cool and pure."),
+    ),
+    "copies" => 1,
+  ),
+  "cave_bread" => array(
+    "card_name" => clienttranslate("Cave Bread"),
+    "description" => array(
+      clienttranslate("The Knight regains 1 Hero cube from the Discarded Hero Cubes space on her player board. (<em>If none available, take one from the highest-numbered space on the Grit track.</em>)"),
+    ),
+    "quote" => array(
+      clienttranslate("Some old adventurer's rations, strangely unspoiled and heartening."),
+    ),
+    "copies" => 1,
+  ),
+  "rats" => array(
+    "card_name" => clienttranslate("Rats"),
+    "description" => array(
+      clienttranslate("The Knight loses 2 Grit."),
+    ),
+    "quote" => array(
+      clienttranslate("You are bitten by a large and oily rat."),
+    ),
+    "copies" => 3,
+  ),
+  "deep_and_dark" => array(
+    "card_name" => clienttranslate("Deep and Dark"),
+    "description" => array(
+      clienttranslate("The Cave draws 2 Omen tokens."),
+      clienttranslate("If there is no Cave player, the Knight gains a Treasure card instead.")
+    ),
+    "quote" => array(
+      clienttranslate("A maze of twisty little passages, all alike."),
+      clienttranslate("A little maze of twisty passages, all different."),
+      clienttranslate("A twisty little maze of passages, all alike."),
+    ),
+    "copies" => 3,
+  ),
+
+);
+
 
 // Goblins!
 
@@ -399,6 +490,7 @@ $this->secrets = array(
     ),
     "quote" => clienttranslate("Hushquiet! Time for some creepery.")
   ),
+
 
 
 );
