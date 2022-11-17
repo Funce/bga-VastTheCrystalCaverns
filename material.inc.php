@@ -310,7 +310,6 @@ $this->events = array(
     ),
     "copies" => 3,
   ),
-
 );
 
 
@@ -490,7 +489,47 @@ $this->secrets = array(
     ),
     "quote" => clienttranslate("Hushquiet! Time for some creepery.")
   ),
+);
 
 
+// Dragon!
 
+// Powers
+$this->powers = array(
+  "claw" => array(
+    "card_name" => clienttranslate("Claw"),
+    "quote" => array(
+      clienttranslate("Krraaaaarrrrr!!"),
+      clienttranslate("Rrraaagghhh!!"),
+      clienttranslate("Hooaaaarrrrggghhhh!!"),
+      clienttranslate("Mmmrrrrrrggggghh!!"),
+      clienttranslate("Rrrraaaaoooaaooowwwwrrrr!!"),
+      clienttranslate("WwrrRRAaarrrraarrrraar!!"),
+    ),
+    "copies" => 6,
+  ),
+  "flame" => array(
+    "card_name" => clienttranslate("Flame"),
+    "quote" => array(
+      clienttranslate("HissssSSSssSSsss..."),
+      clienttranslate("Ssshshsaasasss..."),
+      clienttranslate("Sssrrreeeesssskk..."),
+      clienttranslate("Ssshhhrraaaaaggggghh..."),
+      clienttranslate("Khrrraaarrgghhh..."),
+      clienttranslate("Shhhhsssshhshsssss..."),
+    ),
+    "copies" => 6,
+  ),
+  "wing" => array(
+    "card_name" => clienttranslate("Wing"),
+    "quote" => array(
+      clienttranslate("Kraka-KA!!"),
+      clienttranslate("MmmrroOOWK!!"),
+      clienttranslate("GrreeeooOOOORRRGH!!"),
+      clienttranslate("A-a-a-a-a-aARK!"),
+      clienttranslate("Keeeaaa!!"),
+      clienttranslate("GRA-gra-GRAKK!!"),
+    ),
+    "copies" => 6,
+  ),
 );
