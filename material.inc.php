@@ -91,12 +91,12 @@ $this->variants = array(
   "alone_in_the_dark" => array(
     "card_name" => clienttranslate("Alone in the Dark"),
     "description" => array(
-      clienttranslate("At the end of your turn, instead of drawing and placing 1 Dark tile, draw and place Dark tiles equal in number to the <b>greatest</b> of the following:"),
-      clienttranslate("<b>ALL:</b> The number of revealed Crystal tiles (<em>including collapsed tiles</em>)."),
-      clienttranslate("<b>Knight:</b> The number of Hero cubes you have available to place or have placed."),
-      clienttranslate("<b>Goblins:</b> The Population of your largest Tribe."),
-      clienttranslate("<b>Dragon:</b> Your Spirit statistic."),
-      clienttranslate("<b>Thief:</b> Your Movement statistic."),
+      clienttranslate("At the end of your turn, instead of drawing and placing 1 Dark tile, draw and place Dark tiles equal in number to the *greatest* of the following:"),
+      clienttranslate("*ALL:* The number of revealed Crystal tiles (/including collapsed tiles/)."),
+      clienttranslate("*Knight:* The number of Hero cubes you have available to place or have placed."),
+      clienttranslate("*Goblins:* The Population of your largest Tribe."),
+      clienttranslate("*Dragon:* Your Spirit statistic."),
+      clienttranslate("*Thief:* Your Movement statistic."),
       clienttranslate("If the Collapse has begun, remove the same number of tiles instead. When selecting tiles to collapse, always choose Crystal tiles first, then Dark tiles, then Lit tiles."),
     ),
     "quote" => clienttranslate("It's quiet in here. A little too quiet...")
@@ -104,7 +104,7 @@ $this->variants = array(
   "ash_dragon" => array(
     "card_name" => clienttranslate("Ash Dragon"),
     "description" => array(
-      clienttranslate("The Dragon gets +1 Armor (<em>maximum 4</em>). Goblin Tribes may use the Attack action against the Dragon: reduce the Dragon's Health by 1, reduce the Goblins' Rage by 1, and scatter the attacking Tribe."),
+      clienttranslate("The Dragon gets +1 Armor (/maximum 4/). Goblin Tribes may use the Attack action against the Dragon: reduce the Dragon's Health by 1, reduce the Goblins' Rage by 1, and scatter the attacking Tribe."),
     ),
     "quote" => clienttranslate("Come, come. We knows where tasty dragonmonster sleeps!")
   ),
@@ -112,25 +112,25 @@ $this->variants = array(
     "card_name" => clienttranslate("Flare"),
     "description" => array(
       clienttranslate("Choose a space and roll the Dragon die. Reveal all Dark tiles affected by the roll, with the selected space as the center."),
-      clienttranslate("The Knight may target any space on the map, once per turn (<em>does not use an Encounter</em>)."),
+      clienttranslate("The Knight may target any space on the map, once per turn (/does not use an Encounter/)."),
       clienttranslate("A Goblin Tribe may target its current space without using an action, before or after moving."),
       clienttranslate("The Thief may target his current space, spending 1 Action cube each time."),
-      clienttranslate("(<em>Tiles revealed by the Knight are worth Grit as if she had revealed them normally. Place Event tokens on any Event tiles revealed.</em>)"),
+      clienttranslate("(/Tiles revealed by the Knight are worth Grit as if she had revealed them normally. Place Event tokens on any Event tiles revealed./)"),
     ),
     "quote" => clienttranslate("May this be a light for you, when all else falls dark.")
   ),
   "goblin_infestation" => array(
     "card_name" => clienttranslate("Goblin Infestation"),
     "description" => array(
-      clienttranslate("Whenever you must resolve an Ambush tile or <em>Ambush</em> Event card, resolve the attack by comparing your Strength to the ambusher's Strength,as below. (<em>You may assign more Hero cubes to Strength before resolving the attack.</em>)"),
-      clienttranslate("<b>A. Normal Goblins:</b> STR 2"),
-      clienttranslate("<b>B. Tough Goblins:</b> STR 3"),
-      clienttranslate("<b>C. Monsters:</b> Draw a Monster, see AMBUSH"),
+      clienttranslate("Whenever you must resolve an Ambush tile or /Ambush/ Event card, resolve the attack by comparing your Strength to the ambusher's Strength,as below. (/You may assign more Hero cubes to Strength before resolving the attack./)"),
+      clienttranslate("*A. Normal Goblins:* STR 2"),
+      clienttranslate("*B. Tough Goblins:* STR 3"),
+      clienttranslate("*C. Monsters:* Draw a Monster, see AMBUSH"),
       "<hr />",
-      clienttranslate("<b>Your Strength Is Higher:</b>"),
-      clienttranslate("<em>Lose no Health. Do not resolve Monster text.</em>"),
-      clienttranslate("<b>Strengths Are Equal:</b> <em>Roll the Dragon die.</em>"),
-      clienttranslate("<em>If it affects the center tile, lose 1 Health and resolve the Monster's Ambush text (if any)</em>."),
+      clienttranslate("*Your Strength Is Higher:*"),
+      clienttranslate("/Lose no Health. Do not resolve Monster text./"),
+      clienttranslate("*Strengths Are Equal:* /Roll the Dragon die./"),
+      clienttranslate("/If it affects the center tile, lose 1 Health and resolve the Monster's Ambush text (if any)/."),
       clienttranslate("Your Strength Is Lower: Lose 1 Health and resolve the Monster's Ambush text (if any)."),
     ),
     "quote" => clienttranslate("Goblins? There are no goblins in this cave!")
@@ -138,11 +138,10 @@ $this->variants = array(
   "past_plunder" => array(
     "card_name" => clienttranslate("Past Plunder"),
     "description" => array(
-      clienttranslate("At the end of your turn, place a Treasure token on any Dark tile with no components on it. If there is no such tile, draw a new tile and place it next to any Dark tile, then place the Treasure token on the new tile. (<em>If all Dark tiles have collapsed, place the token on a Lit tile instead.</em>)"),
+      clienttranslate("At the end of your turn, place a Treasure token on any Dark tile with no components on it. If there is no such tile, draw a new tile and place it next to any Dark tile, then place the Treasure token on the new tile. (/If all Dark tiles have collapsed, place the token on a Lit tile instead./)"),
     ),
     "quote" => clienttranslate("You'd be surprised what you can find in places like this if you keep your eyes open.")
   ),
-
 );
 
 
@@ -152,13 +151,13 @@ $this->variants = array(
 $this->sidequests = array(
   "stalwart" => array(
     "card_name" => clienttranslate("Stalwart"),
-    "description" => clienttranslate("Attack a Goblin Tribe with a Population of 3 or greater. If there is no Goblin player, resolve 2 ambush tiles or <em>Ambush</em> cards, in any combination, during one turn instead."),
+    "description" => clienttranslate("Attack a Goblin Tribe with a Population of 3 or greater. If there is no Goblin player, resolve 2 ambush tiles or /Ambush/ cards, in any combination, during one turn instead."),
     "quote" => clienttranslate("Come and get it, you little creeps!"),
     "reward" => 5
   ),
   "intrepid" => array(
     "card_name" => clienttranslate("Intrepid"),
-    "description" => clienttranslate("Reveal this card when 10 or more Cave tiles have been revealed. <em>Terrain tiles do not count</em>."),
+    "description" => clienttranslate("Reveal this card when 10 or more Cave tiles have been revealed. /Terrain tiles do not count/."),
     "quote" => clienttranslate("Heeeere dragon, dragon, dragon..."),
     "reward" => 3
   ),
@@ -170,7 +169,7 @@ $this->sidequests = array(
   ),
   "fearless" => array(
     "card_name" => clienttranslate("Fearless"),
-    "description" => clienttranslate("Reveal a Dark tile with a Goblin Tribe on it, then attack the Tribe on the same Encounter. If there is no Goblin player, instead resolve an Ambush tile or <em>Ambush</em> card, attacking a Monster and losing no Health. (<em>You may draw a Monster instead of fighting Normal or Tough Goblins.</em>)"),
+    "description" => clienttranslate("Reveal a Dark tile with a Goblin Tribe on it, then attack the Tribe on the same Encounter. If there is no Goblin player, instead resolve an Ambush tile or /Ambush/ card, attacking a Monster and losing no Health. (/You may draw a Monster instead of fighting Normal or Tough Goblins./)"),
     "quote" => clienttranslate("I don't need to see you to strike you down!"),
     "reward" => 4
   ),
@@ -217,7 +216,7 @@ $this->treasure = array(
   "javelin" => array(
     "card_name" => clienttranslate("Javelin"),
     "description" => array(
-      clienttranslate("When used, your next attack may target the Dragon while he is underground without using a Bomb, and you gain +1 Strength on your next attack. Remove the Javelin from the game after resolving its effects. (<em>Doesn't require a Hero cube to use. Cannot be used on the same turn as a Bomb.</em>)."),
+      clienttranslate("When used, your next attack may target the Dragon while he is underground without using a Bomb, and you gain +1 Strength on your next attack. Remove the Javelin from the game after resolving its effects. (/Doesn't require a Hero cube to use. Cannot be used on the same turn as a Bomb./)."),
     ),
     "quote" => clienttranslate("The favorite weapon of Jodbar the Left-Handed. Believed to be lost forever when Jodbar threw it twelve miles on a dare."),
     "cube_slots" => 0
@@ -235,7 +234,7 @@ $this->treasure = array(
     "card_name" => clienttranslate("Mighty Axe"),
     "description" => array(
       clienttranslate("+1 Strength during your turn only."),
-      clienttranslate("When attacking the Dragon, you may discard the Hero cube on this card to remove another Health. (<em>Cannot be used with a Bomb. Place the discarded cube on the Discarded Hero Cubes space on your player board.</em>)"),
+      clienttranslate("When attacking the Dragon, you may discard the Hero cube on this card to remove another Health. (/Cannot be used with a Bomb. Place the discarded cube on the Discarded Hero Cubes space on your player board./)"),
     ),
     "quote" => clienttranslate("Carved with sigils of great power, and heavy—strangely heavy..."),
     "cube_slots" => 1
@@ -243,7 +242,7 @@ $this->treasure = array(
   "potion_kit" => array(
     "card_name" => clienttranslate("Potion Kit"),
     "description" => array(
-      clienttranslate("Discard the Hero cube on this card and remove this card from the game to regain 2 Health. (<em>Place the discarded cube on the Discarded Hero Cubes space on your player board.</em>)"),
+      clienttranslate("Discard the Hero cube on this card and remove this card from the game to regain 2 Health. (/Place the discarded cube on the Discarded Hero Cubes space on your player board./)"),
     ),
     "quote" => clienttranslate("Comes with recipes for healing salve, the Crystal Cavern Cocktail, and lizardnoodle soup."),
     "cube_slots" => 1
@@ -277,7 +276,7 @@ $this->treasure = array(
   "enchanted_bow" => array(
     "card_name" => clienttranslate("Enchanted Bow"),
     "description" => array(
-      clienttranslate("Shoot the Dragon or Thief up to 5 tiles away in a straight line, even if underground or if there are walls or Dark tiles between. The Dragon chooses and discards Power cards equal in number to your Strength - 1 (Max: 3). The Thief is killed if your Perception is greater than his Stealth. (<em>May be used before, during, or after movement.</em>)"),
+      clienttranslate("Shoot the Dragon or Thief up to 5 tiles away in a straight line, even if underground or if there are walls or Dark tiles between. The Dragon chooses and discards Power cards equal in number to your Strength - 1 (Max: 3). The Thief is killed if your Perception is greater than his Stealth. (/May be used before, during, or after movement./)"),
     ),
     "quote" => clienttranslate("Made from the bones of some ancient creature. Oddly warm to the touch."),
     "cube_slots" => 1
@@ -302,7 +301,7 @@ $this->events = array(
   "light" => array(
     "card_name" => clienttranslate("Light"),
     "description" => array(
-      clienttranslate("The Knight may discard a Hero cube to regain 2 Health. (<em>Place the cube on the Discarded Hero Cubes space on the Knight's player board.</em>)"),
+      clienttranslate("The Knight may discard a Hero cube to regain 2 Health. (/Place the cube on the Discarded Hero Cubes space on the Knight's player board./)"),
     ),
     "quote" => array(
       clienttranslate("A shaft of sunlight from the world above."),
@@ -312,7 +311,7 @@ $this->events = array(
   "vantage_point" => array(
     "card_name" => clienttranslate("Vantage Point"),
     "description" => array(
-      clienttranslate("Reveal all Dark tiles surrounding the Knight. (<em>The revealed tiles are worth Grit as if they had been revealed normally. Place Event tokens on any Event tiles revealed.</em>)"),
+      clienttranslate("Reveal all Dark tiles surrounding the Knight. (/The revealed tiles are worth Grit as if they had been revealed normally. Place Event tokens on any Event tiles revealed./)"),
     ),
     "quote" => array(
       clienttranslate("A high outcropping with a long, clear view."),
@@ -342,7 +341,7 @@ $this->events = array(
   "cave_bread" => array(
     "card_name" => clienttranslate("Cave Bread"),
     "description" => array(
-      clienttranslate("The Knight regains 1 Hero cube from the Discarded Hero Cubes space on her player board. (<em>If none available, take one from the highest-numbered space on the Grit track.</em>)"),
+      clienttranslate("The Knight regains 1 Hero cube from the Discarded Hero Cubes space on her player board. (/If none available, take one from the highest-numbered space on the Grit track./)"),
     ),
     "quote" => array(
       clienttranslate("Some old adventurer's rations, strangely unspoiled and heartening."),
@@ -486,7 +485,7 @@ $this->monsters = array(
   "pet_frog" => array(
     "card_name" => clienttranslate("Pet Frog"),
     "description" => array(
-      clienttranslate("When the Population of this Tribe reaches 4, ignore any further Goblin discs that would be added to it. (<em>This Tribe cannot cause overpopulation.</em>) Also, malaise does not decrease this Tribe's Strength."),
+      clienttranslate("When the Population of this Tribe reaches 4, ignore any further Goblin discs that would be added to it. (/This Tribe cannot cause overpopulation./) Also, malaise does not decrease this Tribe's Strength."),
     ),
     "ambush_text" => "",
     "ambush_str" => 2,
@@ -610,8 +609,8 @@ $this->secrets = array(
     "card_name" => clienttranslate("Goblin Ruby"),
     "description" => array(
       clienttranslate("Place this card face-up on the table."),
-      clienttranslate("<b>-1 Perception (All Tribes)</b>"),
-      clienttranslate("Once per turn, immediately after drawing War, Monster, or Secrets cards, you may discard and redraw one card. Discard <em>Goblin Ruby</em> when any Tribe's Population decreases to 0."),
+      clienttranslate("*-1 Perception (All Tribes)*"),
+      clienttranslate("Once per turn, immediately after drawing War, Monster, or Secrets cards, you may discard and redraw one card. Discard /Goblin Ruby/ when any Tribe's Population decreases to 0."),
     ),
     "quote" => clienttranslate("Ain't it the prettyshiniest thing you ever did see?")
   ),
@@ -632,11 +631,11 @@ $this->secrets = array(
   "hex" => array(
     "card_name" => clienttranslate("Hex"),
     "description" => array(
-      clienttranslate("Choose a player to hex. In each effect, <em>X</em> equals the Eye Tribe's Population."),
-      clienttranslate("<b>Knight:</b> Lose <em>X</em> Grit."),
-      clienttranslate("<b>Dragon:</b> Discard <em>X</em> Power cards (<em>Dragon chooses</em>)."),
-      clienttranslate("<b>Cave</b>: Discard <em>X</em> Omen tokens (<em>Cave chooses</em>)."),
-      clienttranslate("<b>Thief:</b> Decrease Stealth by <em>X</em> until the Goblins' next turn."),
+      clienttranslate("Choose a player to hex. In each effect, /X/ equals the Eye Tribe's Population."),
+      clienttranslate("*Knight:* Lose /X/ Grit."),
+      clienttranslate("*Dragon:* Discard /X/ Power cards (/Dragon chooses/)."),
+      clienttranslate("*Cave*: Discard /X/ Omen tokens (/Cave chooses/)."),
+      clienttranslate("*Thief:* Decrease Stealth by /X/ until the Goblins' next turn."),
     ),
     "quote" => clienttranslate("Boil, boil and... yeah just keep boiling.")
   ),
