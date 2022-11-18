@@ -116,6 +116,24 @@ class VastTheCrystalCaverns extends Table
         $sql = "SELECT player_id id, player_score score FROM player ";
         $result['players'] = self::getCollectionFromDb($sql);
 
+        // Materials
+        //General
+        $result['misc_cards'] = $this->misc_cards;
+
+        //Knight
+        $result['sidequests'] = $this->sidequests;
+        $result['event'] = $this->events;
+        $result['treasure'] = $this->treasure;
+
+        //Goblins
+        $result['war'] = $this->war;
+        $result['monsters'] = $this->monsters;
+        $result['secrets'] = $this->secrets;
+
+        //Dragon
+        $result['powers'] = $this->powers;
+
+
         // TODO: Gather all information about current game situation (visible by player $current_player_id).
 
         return $result;
