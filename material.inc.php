@@ -84,6 +84,68 @@ $this->tiles = array(
     Size - 6
 */
 
+// General Cards
+
+// Variants
+$this->variants = array(
+  "alone_in_the_dark" => array(
+    "card_name" => clienttranslate("Alone in the Dark"),
+    "description" => array(
+      clienttranslate("At the end of your turn, instead of drawing and placing 1 Dark tile, draw and place Dark tiles equal in number to the <b>greatest</b> of the following:"),
+      clienttranslate("<b>ALL:</b> The number of revealed Crystal tiles (<em>including collapsed tiles</em>)."),
+      clienttranslate("<b>Knight:</b> The number of Hero cubes you have available to place or have placed."),
+      clienttranslate("<b>Goblins:</b> The Population of your largest Tribe."),
+      clienttranslate("<b>Dragon:</b> Your Spirit statistic."),
+      clienttranslate("<b>Thief:</b> Your Movement statistic."),
+      clienttranslate("If the Collapse has begun, remove the same number of tiles instead. When selecting tiles to collapse, always choose Crystal tiles first, then Dark tiles, then Lit tiles."),
+    ),
+    "quote" => clienttranslate("It's quiet in here. A little too quiet...")
+  ),
+  "ash_dragon" => array(
+    "card_name" => clienttranslate("Ash Dragon"),
+    "description" => array(
+      clienttranslate("The Dragon gets +1 Armor (<em>maximum 4</em>). Goblin Tribes may use the Attack action against the Dragon: reduce the Dragon's Health by 1, reduce the Goblins' Rage by 1, and scatter the attacking Tribe."),
+    ),
+    "quote" => clienttranslate("Come, come. We knows where tasty dragonmonster sleeps!")
+  ),
+  "flare" => array(
+    "card_name" => clienttranslate("Flare"),
+    "description" => array(
+      clienttranslate("Choose a space and roll the Dragon die. Reveal all Dark tiles affected by the roll, with the selected space as the center."),
+      clienttranslate("The Knight may target any space on the map, once per turn (<em>does not use an Encounter</em>)."),
+      clienttranslate("A Goblin Tribe may target its current space without using an action, before or after moving."),
+      clienttranslate("The Thief may target his current space, spending 1 Action cube each time."),
+      clienttranslate("(<em>Tiles revealed by the Knight are worth Grit as if she had revealed them normally. Place Event tokens on any Event tiles revealed.</em>)"),
+    ),
+    "quote" => clienttranslate("May this be a light for you, when all else falls dark.")
+  ),
+  "goblin_infestation" => array(
+    "card_name" => clienttranslate("Goblin Infestation"),
+    "description" => array(
+      clienttranslate("Whenever you must resolve an Ambush tile or <em>Ambush</em> Event card, resolve the attack by comparing your Strength to the ambusher's Strength,as below. (<em>You may assign more Hero cubes to Strength before resolving the attack.</em>)"),
+      clienttranslate("<b>A. Normal Goblins:</b> STR 2"),
+      clienttranslate("<b>B. Tough Goblins:</b> STR 3"),
+      clienttranslate("<b>C. Monsters:</b> Draw a Monster, see AMBUSH"),
+      "<hr />",
+      clienttranslate("<b>Your Strength Is Higher:</b>"),
+      clienttranslate("<em>Lose no Health. Do not resolve Monster text.</em>"),
+      clienttranslate("<b>Strengths Are Equal:</b> <em>Roll the Dragon die.</em>"),
+      clienttranslate("<em>If it affects the center tile, lose 1 Health and resolve the Monster's Ambush text (if any)</em>."),
+      clienttranslate("Your Strength Is Lower: Lose 1 Health and resolve the Monster's Ambush text (if any)."),
+    ),
+    "quote" => clienttranslate("Goblins? There are no goblins in this cave!")
+  ),
+  "past_plunder" => array(
+    "card_name" => clienttranslate("Past Plunder"),
+    "description" => array(
+      clienttranslate("At the end of your turn, place a Treasure token on any Dark tile with no components on it. If there is no such tile, draw a new tile and place it next to any Dark tile, then place the Treasure token on the new tile. (<em>If all Dark tiles have collapsed, place the token on a Lit tile instead.</em>)"),
+    ),
+    "quote" => clienttranslate("You'd be surprised what you can find in places like this if you keep your eyes open.")
+  ),
+
+);
+
+
 // Knight!
 
 // Sidequests
@@ -576,7 +638,7 @@ $this->secrets = array(
       clienttranslate("<b>Cave</b>: Discard <em>X</em> Omen tokens (<em>Cave chooses</em>)."),
       clienttranslate("<b>Thief:</b> Decrease Stealth by <em>X</em> until the Goblins' next turn."),
     ),
-    "quote" => clienttranslate("Boil, boil and… yeah just keep boiling.")
+    "quote" => clienttranslate("Boil, boil and... yeah just keep boiling.")
   ),
   "trap" => array(
     "card_name" => clienttranslate("Trap"),
