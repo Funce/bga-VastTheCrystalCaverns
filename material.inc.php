@@ -86,8 +86,8 @@ $this->tiles = array(
 
 // General Cards
 
-// Variants
-$this->variants = array(
+// Misc Cards - Variants, and other cards that don't otherwise belong in a collection
+$this->misc_cards = array(
   "alone_in_the_dark" => array(
     "card_name" => clienttranslate("Alone in the Dark"),
     "description" => array(
@@ -141,6 +141,29 @@ $this->variants = array(
       clienttranslate("At the end of your turn, place a Treasure token on any Dark tile with no components on it. If there is no such tile, draw a new tile and place it next to any Dark tile, then place the Treasure token on the new tile. (/If all Dark tiles have collapsed, place the token on a Lit tile instead./)"),
     ),
     "quote" => clienttranslate("You'd be surprised what you can find in places like this if you keep your eyes open.")
+  ),
+  "the_cave_grows" => array(
+    "card_name" => clienttranslate("The Cave Grows..."),
+    "description" => array(
+      clienttranslate("The Cave places 1 tile on its turn."),
+      clienttranslate("If there is no Cave player, each player places 1 tile at the end of their own turn."),
+      clienttranslate("Flip this card over when the last Cave tile is placed. The Collapse begins on the next turn."),
+    ),
+    "quote" => clienttranslate("Legends say this cave stretches to eternity. No one has ever proven them wrong.")
+  ),
+  "the_cave_is_collapsing" => array(
+    "card_name" => clienttranslate("The Cave Is Collapsing!"),
+    "description" => array(
+      clienttranslate("The Cave collapses 3 tiles on its turn."),
+      clienttranslate("If there is no Cave player, each player collapses 3 tiles at the end of their own turn."),
+      clienttranslate("If 5 Crystal tiles have collapsed, the Cave wins and all other players lose."),
+      clienttranslate("/Remove tiles that touch only 1 tile first, then remove tiles that touch only 2 tiles./"),
+      clienttranslate("/The Entrance tile can never be collapsed./"),
+      clienttranslate("/If any other token is on a collapsed tile, it is returned to its player's supply./"),
+      clienttranslate("/Crystal tokens removed by collapsing tiles do not count toward *any* victory conditions./"),
+      clienttranslate("/For more details, see *The Collapse* on page 4 of the rulebook./"),
+    ),
+    "quote" => clienttranslate("Sir, it's quite possible this cave is not entirely stable...")
   ),
 );
 
