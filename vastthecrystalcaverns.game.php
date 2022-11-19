@@ -41,6 +41,21 @@ class VastTheCrystalCaverns extends Table
             //    "my_second_game_variant" => 101,
             //      ...
         ));
+
+        // Card Decks!
+        // Knight
+        // Sidequests!
+        $this->sidequestDeck = self::getNew("module.common.deck");
+        $this->sidequestDeck->init('sidequests');
+
+        // Goblins
+        // Monsters!
+        $this->monsterDeck = self::getNew("module.common.deck");
+        $this->monsterDeck->init('monsters');
+
+        // Secrets!
+        $this->secretDeck = self::getNew("module.common.deck");
+        $this->secretDeck->init('secrets');
     }
 
     protected function getGameName()
@@ -59,7 +74,6 @@ class VastTheCrystalCaverns extends Table
     protected function setupNewGame($players, $options = array())
     {
         // Set the colors of the players with HTML color code
-        // The default below is red/green/blue/orange/brown
         // The number of colors defined here must correspond to the maximum number of players allowed for the gams
         $gameinfos = self::getGameinfos();
         $default_colors = $gameinfos['player_colors'];
@@ -74,7 +88,7 @@ class VastTheCrystalCaverns extends Table
         }
         $sql .= implode(',', $values);
         self::DbQuery($sql);
-        self::reattributeColorsBasedOnPreferences($players, $gameinfos['player_colors']);
+        // self::reattributeColorsBasedOnPreferences($players, $gameinfos['player_colors']);
         self::reloadPlayersBasicInfos();
 
         /************ Start the game initialization *****/
