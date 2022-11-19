@@ -171,7 +171,7 @@ $this->misc_cards = array(
 // Knight!
 
 // Sidequests
-$this->sidequests = array(
+$this->sidequest_cards = array(
   "stalwart" => array(
     "card_name" => clienttranslate("Stalwart"),
     "description" => clienttranslate("Attack a Goblin Tribe with a Population of 3 or greater. If there is no Goblin player, resolve 2 ambush tiles or /Ambush/ cards, in any combination, during one turn instead."),
@@ -245,7 +245,7 @@ $this->sidequests = array(
 );
 
 // Treasure!
-$this->treasure = array(
+$this->treasure_cards = array(
   "javelin" => array(
     "card_name" => clienttranslate("Javelin"),
     "description" => array(
@@ -317,7 +317,7 @@ $this->treasure = array(
 );
 
 // Events!
-$this->events = array(
+$this->event_cards = array(
   "ambush" => array(
     "card_name" => clienttranslate("Ambush"),
     "description" => array(
@@ -410,7 +410,7 @@ $this->events = array(
 // Goblins!
 
 // War!
-$this->war = array(
+$this->war_cards = array(
   "thirst" => array(
     "card_name" => clienttranslate("Thirst"),
     "fangs" => 3,
@@ -514,7 +514,7 @@ $this->war = array(
 );
 
 // Monsters!
-$this->monsters = array(
+$this->monster_cards = array(
   "pet_frog" => array(
     "card_name" => clienttranslate("Pet Frog"),
     "description" => array(
@@ -609,7 +609,7 @@ $this->monsters = array(
 );
 
 // Secrets!
-$this->secrets = array(
+$this->secret_cards = array(
   "secret_tunnels" => array(
     "card_name" => clienttranslate("Secret Tunnels"),
     "description" => array(
@@ -693,7 +693,7 @@ $this->secrets = array(
 // Dragon!
 
 // Powers
-$this->powers = array(
+$this->power_cards = array(
   "claw" => array(
     "card_name" => clienttranslate("Claw"),
     "quote" => array(

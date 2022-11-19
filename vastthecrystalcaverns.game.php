@@ -135,17 +135,17 @@ class VastTheCrystalCaverns extends Table
         $result['misc_cards'] = $this->misc_cards;
 
         //Knight
-        $result['sidequests'] = $this->sidequests;
-        $result['event'] = $this->events;
-        $result['treasure'] = $this->treasure;
+        $result['sidequest_cards'] = $this->sidequest_cards;
+        $result['event_cards'] = $this->event_cards;
+        $result['treasure_cards'] = $this->treasure_cards;
 
         //Goblins
-        $result['war'] = $this->war;
-        $result['monsters'] = $this->monsters;
-        $result['secrets'] = $this->secrets;
+        $result['war_cards'] = $this->war_cards;
+        $result['monster_cards'] = $this->monster_cards;
+        $result['secret_cards'] = $this->secret_cards;
 
         //Dragon
-        $result['powers'] = $this->powers;
+        $result['power_cards'] = $this->power_cards;
 
 
         // TODO: Gather all information about current game situation (visible by player $current_player_id).
