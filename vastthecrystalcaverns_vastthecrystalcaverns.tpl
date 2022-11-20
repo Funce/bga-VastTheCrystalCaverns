@@ -26,8 +26,9 @@
 -->
 
 
-This is your game interface. You can edit this HTML in your ".tpl" file.
-
+<div id="sidequest_zone" class="cardsZone whiteblock">
+    <div id="sidequests"></div>
+</div>
 
 <script type="text/javascript">
 

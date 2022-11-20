@@ -20,6 +20,7 @@ define([
 	"dojo/_base/declare",
 	"ebg/core/gamegui",
 	"ebg/counter",
+	"ebg/stock",
 ], function (dojo, declare) {
 	return declare("bgagame.vastthecrystalcaverns", ebg.core.gamegui, {
 		constructor: function () {
@@ -54,6 +55,33 @@ define([
 			}
 
 			// TODO: Set up your game interface here, according to "gamedatas"
+			// Lets get the sidequests showing up!
+
+			this.sidequests = new ebg.stock()
+			this.sidequests.setSelectionMode(0)
+			this.sidequests.item_margin = 5
+			this.sidequests.automargin = true
+			this.sidequests.image_items_per_row = 5
+			this.sidequests.create(this, $("sidequests"), 330, 460)
+			this.sidequests.onItemCreate = dojo.hitch(this, "setupSidequest")
+			for (var sidequestCardId in gamedatas.sidequests) {
+				var sidequest = gamedatas.sidequests[sidequestCardId]
+				var sidequestType = sidequest.type
+				if (gamedatas.sidequest_cards.hasOwnProperty(sidequestType)) {
+					var sidequestCard = gamedatas.sidequest_cards[sidequestType]
+
+					this.sidequests.addItemType(
+						sidequestCardId,
+						0,
+						g_gamethemeurl + "img/sidequests.png",
+						sidequestCard.sprite
+					)
+					this.sidequests.addToStockWithId(
+						sidequestCardId,
+						sidequestType
+					)
+				}
+			}
 
 			// Setup game notifications to handle (see "setupNotifications" method below)
 			this.setupNotifications()
@@ -143,6 +171,43 @@ define([
             script.
         
         */
+
+		setupSidequest: function (card_div, card_type_id, card_id) {
+			dojo.addClass(card_div, "sidequest")
+			this.createSideQuestContent(card_div, card_id.split("_")[2])
+			// Set up tooltip sometime lmao
+		},
+
+		createSideQuestContent: function (card_div, card_key) {
+			console.log(card_key)
+			var sidequestCard = this.gamedatas.sidequest_cards[card_key]
+			console.log(sidequestCard)
+			dojo.create(
+				"h3",
+				{ innerHTML: _(sidequestCard.card_name) },
+				card_div
+			)
+
+			var tmpobj = {
+				innerHTML: bga_format(_(sidequestCard.description), {
+					"/": "italic",
+				}),
+				class: "description",
+			}
+			dojo.create("p", tmpobj, card_div)
+
+			var tmpobj = {
+				innerHTML: '"' + _(sidequestCard.quote) + '"',
+				class: "quote",
+			}
+			dojo.create("p", tmpobj, card_div)
+
+			var tmpobj = {
+				innerHTML: _(sidequestCard.reward),
+				class: "grit_reward",
+			}
+			dojo.create("p", tmpobj, card_div)
+		},
 
 		///////////////////////////////////////////////////
 		//// Player's action

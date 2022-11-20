@@ -101,7 +101,7 @@ $this->misc_cards = array(
     ),
     "quote" => clienttranslate("It's quiet in here. A little too quiet...")
   ),
-  "ash_dragon" => array(
+  "ash-dragon" => array(
     "card_name" => clienttranslate("Ash Dragon"),
     "description" => array(
       clienttranslate("The Dragon gets +1 Armor (/maximum 4/). Goblin Tribes may use the Attack action against the Dragon: reduce the Dragon's Health by 1, reduce the Goblins' Rage by 1, and scatter the attacking Tribe."),
@@ -119,7 +119,7 @@ $this->misc_cards = array(
     ),
     "quote" => clienttranslate("May this be a light for you, when all else falls dark.")
   ),
-  "goblin_infestation" => array(
+  "goblin-infestation" => array(
     "card_name" => clienttranslate("Goblin Infestation"),
     "description" => array(
       clienttranslate("Whenever you must resolve an Ambush tile or /Ambush/ Event card, resolve the attack by comparing your Strength to the ambusher's Strength,as below. (/You may assign more Hero cubes to Strength before resolving the attack./)"),
@@ -135,14 +135,14 @@ $this->misc_cards = array(
     ),
     "quote" => clienttranslate("Goblins? There are no goblins in this cave!")
   ),
-  "past_plunder" => array(
+  "past-plunder" => array(
     "card_name" => clienttranslate("Past Plunder"),
     "description" => array(
       clienttranslate("At the end of your turn, place a Treasure token on any Dark tile with no components on it. If there is no such tile, draw a new tile and place it next to any Dark tile, then place the Treasure token on the new tile. (/If all Dark tiles have collapsed, place the token on a Lit tile instead./)"),
     ),
     "quote" => clienttranslate("You'd be surprised what you can find in places like this if you keep your eyes open.")
   ),
-  "the_cave_grows" => array(
+  "the-cave-grows" => array(
     "card_name" => clienttranslate("The Cave Grows..."),
     "description" => array(
       clienttranslate("The Cave places 1 tile on its turn."),
@@ -151,7 +151,7 @@ $this->misc_cards = array(
     ),
     "quote" => clienttranslate("Legends say this cave stretches to eternity. No one has ever proven them wrong.")
   ),
-  "the_cave_is_collapsing" => array(
+  "the-cave-is-collapsing" => array(
     "card_name" => clienttranslate("The Cave Is Collapsing!"),
     "description" => array(
       clienttranslate("The Cave collapses 3 tiles on its turn."),
@@ -228,7 +228,7 @@ $this->sidequest_cards = array(
     "reward" => 4,
     "sprite" => 2,
   ),
-  "eagle_eyed" => array(
+  "eagle-eyed" => array(
     "card_name" => clienttranslate("Eagle-Eyed"),
     "description" => clienttranslate("Shoot another player with the Bow or the Enchanted Bow."),
     "quote" => clienttranslate("Gotcha!"),
@@ -254,7 +254,7 @@ $this->treasure_cards = array(
     "quote" => clienttranslate("The favorite weapon of Jodbar the Left-Handed. Believed to be lost forever when Jodbar threw it twelve miles on a dare."),
     "cube_slots" => 0
   ),
-  "elvish_sword" => array(
+  "elvish-sword" => array(
     "card_name" => clienttranslate("Elvish Sword"),
     "description" => array(
       clienttranslate("+1 Perception."),
@@ -263,7 +263,7 @@ $this->treasure_cards = array(
     "quote" => clienttranslate("It appears to be of great antiquity."),
     "cube_slots" => 1
   ),
-  "mighty_axe" => array(
+  "mighty-axe" => array(
     "card_name" => clienttranslate("Mighty Axe"),
     "description" => array(
       clienttranslate("+1 Strength during your turn only."),
@@ -272,7 +272,7 @@ $this->treasure_cards = array(
     "quote" => clienttranslate("Carved with sigils of great power, and heavy—strangely heavy..."),
     "cube_slots" => 1
   ),
-  "potion_kit" => array(
+  "potion-kit" => array(
     "card_name" => clienttranslate("Potion Kit"),
     "description" => array(
       clienttranslate("Discard the Hero cube on this card and remove this card from the game to regain 2 Health. (/Place the discarded cube on the Discarded Hero Cubes space on your player board./)"),
@@ -280,7 +280,7 @@ $this->treasure_cards = array(
     "quote" => clienttranslate("Comes with recipes for healing salve, the Crystal Cavern Cocktail, and lizardnoodle soup."),
     "cube_slots" => 1
   ),
-  "heroic_boots" => array(
+  "heroic-boots" => array(
     "card_name" => clienttranslate("Heroic Boots"),
     "description" => array(
       clienttranslate("+4 Movement."),
@@ -288,7 +288,7 @@ $this->treasure_cards = array(
     "quote" => clienttranslate("Calen the Swift wore these. It seems now the mystery of her disappearance is solved..."),
     "cube_slots" => 1
   ),
-  "pixie_lantern" => array(
+  "pixie-lantern" => array(
     "card_name" => clienttranslate("Pixie Lantern"),
     "description" => array(
       clienttranslate("+1 Movement."),
@@ -297,7 +297,7 @@ $this->treasure_cards = array(
     "quote" => clienttranslate("It doesn't seem like a good idea to let them out. You know how pixies are."),
     "cube_slots" => 1
   ),
-  "pixie_lantern" => array(
+  "pixie-lantern" => array(
     "card_name" => clienttranslate("Pixie Lantern"),
     "description" => array(
       clienttranslate("+1 Movement."),
@@ -306,7 +306,7 @@ $this->treasure_cards = array(
     "quote" => clienttranslate("It doesn't seem like a good idea to let them out. You know how pixies are."),
     "cube_slots" => 1
   ),
-  "enchanted_bow" => array(
+  "enchanted-bow" => array(
     "card_name" => clienttranslate("Enchanted Bow"),
     "description" => array(
       clienttranslate("Shoot the Dragon or Thief up to 5 tiles away in a straight line, even if underground or if there are walls or Dark tiles between. The Dragon chooses and discards Power cards equal in number to your Strength - 1 (Max: 3). The Thief is killed if your Perception is greater than his Stealth. (/May be used before, during, or after movement./)"),
@@ -341,7 +341,7 @@ $this->event_cards = array(
     ),
     "copies" => 1,
   ),
-  "vantage_point" => array(
+  "vantage-point" => array(
     "card_name" => clienttranslate("Vantage Point"),
     "description" => array(
       clienttranslate("Reveal all Dark tiles surrounding the Knight. (/The revealed tiles are worth Grit as if they had been revealed normally. Place Event tokens on any Event tiles revealed./)"),
@@ -351,7 +351,7 @@ $this->event_cards = array(
     ),
     "copies" => 1,
   ),
-  "fresh_air" => array(
+  "fresh-air" => array(
     "card_name" => clienttranslate("Fresh Air"),
     "description" => array(
       clienttranslate("The Knight may spend a Hero cube to regain 1 Health. She regains the cube on her next turn."),
@@ -361,7 +361,7 @@ $this->event_cards = array(
     ),
     "copies" => 1,
   ),
-  "fresh_water" => array(
+  "fresh-water" => array(
     "card_name" => clienttranslate("Fresh Water"),
     "description" => array(
       clienttranslate("The Knight may spend a Hero cube to regain 1 Health. She regains the cube on her next turn."),
@@ -371,7 +371,7 @@ $this->event_cards = array(
     ),
     "copies" => 1,
   ),
-  "cave_bread" => array(
+  "cave-bread" => array(
     "card_name" => clienttranslate("Cave Bread"),
     "description" => array(
       clienttranslate("The Knight regains 1 Hero cube from the Discarded Hero Cubes space on her player board. (/If none available, take one from the highest-numbered space on the Grit track./)"),
@@ -391,7 +391,7 @@ $this->event_cards = array(
     ),
     "copies" => 3,
   ),
-  "deep_and_dark" => array(
+  "deep-and-dark" => array(
     "card_name" => clienttranslate("Deep and Dark"),
     "description" => array(
       clienttranslate("The Cave draws 2 Omen tokens."),
@@ -515,7 +515,7 @@ $this->war_cards = array(
 
 // Monsters!
 $this->monster_cards = array(
-  "pet_frog" => array(
+  "pet-frog" => array(
     "card_name" => clienttranslate("Pet Frog"),
     "description" => array(
       clienttranslate("When the Population of this Tribe reaches 4, ignore any further Goblin discs that would be added to it. (/This Tribe cannot cause overpopulation./) Also, malaise does not decrease this Tribe's Strength."),
@@ -570,7 +570,7 @@ $this->monster_cards = array(
     "ambush_str" => -1,
     "quote" => clienttranslate("...remember me...this way...can you see me...? ...come on, I'll show you...")
   ),
-  "bright_beetles" => array(
+  "bright-beetles" => array(
     "card_name" => clienttranslate("Bright Beetles"),
     "description" => array(
       clienttranslate("When this Tribe scatters, it loses one less Population. When this Tribe would lose Population by other effects, you may discard Bright Beetles to lose one less Population."),
@@ -597,7 +597,7 @@ $this->monster_cards = array(
     "ambush_str" => 3,
     "quote" => clienttranslate("Gluuuuurrrgghhh...")
   ),
-  "flame_giant" => array(
+  "flame-giant" => array(
     "card_name" => clienttranslate("Flame Giant"),
     "description" => array(
       clienttranslate("This Tribe gets +1 Strength."),
@@ -610,7 +610,7 @@ $this->monster_cards = array(
 
 // Secrets!
 $this->secret_cards = array(
-  "secret_tunnels" => array(
+  "secret-tunnels" => array(
     "card_name" => clienttranslate("Secret Tunnels"),
     "description" => array(
       clienttranslate("During this turn, whenever you activate a revealed Tribe, you may immediately place its piece on any unoccupied Dark tile. If you do so, you cannot move the Tribe by any other effect this turn, but it may still perform its action."),
@@ -638,7 +638,7 @@ $this->secret_cards = array(
     ),
     "quote" => clienttranslate("Followchase me, my Tribegoblins! I'll lead us to dinnertime and the glorious afternap!")
   ),
-  "goblin_ruby" => array(
+  "goblin-ruby" => array(
     "card_name" => clienttranslate("Goblin Ruby"),
     "description" => array(
       clienttranslate("Place this card face-up on the table."),
@@ -647,14 +647,14 @@ $this->secret_cards = array(
     ),
     "quote" => clienttranslate("Ain't it the prettyshiniest thing you ever did see?")
   ),
-  "blind_fury" => array(
+  "blind-fury" => array(
     "card_name" => clienttranslate("Blind Fury"),
     "description" => array(
       clienttranslate("Pick a Tribe. During this turn, it moves through Lit tiles without losing Population."),
     ),
     "quote" => clienttranslate("There's nothing to be fearscared of but light itself!")
   ),
-  "fire_bomber" => array(
+  "fire-bomber" => array(
     "card_name" => clienttranslate("Fire Bomber"),
     "description" => array(
       clienttranslate("Pick a Tribe. During this turn, it gets +2 Strength. If it uses the Attack action during this turn, decrease its Population to 0 after resolving."),
@@ -680,7 +680,7 @@ $this->secret_cards = array(
     ),
     "quote" => clienttranslate("Oh NO, the bigscary KNIGHT is coming! What are we poorwiddle helpless Gobbies gonna doooo?")
   ),
-  "hiding_spots" => array(
+  "hiding-spots" => array(
     "card_name" => clienttranslate("Hiding Spots"),
     "description" => array(
       clienttranslate("A hidden Tribe may use the Attack action against the Knight if she is on or adjacent to an Ambush tile. During this action, do not apply any effects from Monster cards or other Secrets cards."),

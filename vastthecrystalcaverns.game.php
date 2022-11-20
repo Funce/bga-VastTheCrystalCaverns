@@ -34,28 +34,41 @@ class VastTheCrystalCaverns extends Table
         parent::__construct();
 
         self::initGameStateLabels(array(
-            //    "my_first_global_variable" => 10,
-            //    "my_second_global_variable" => 11,
-            //      ...
-            //    "my_first_game_variant" => 100,
-            //    "my_second_game_variant" => 101,
-            //      ...
+            'knight_player' => 10,
+            'goblin_player' => 11,
+            'dragon_player' => 12,
+            'cave_player' => 13,
+            'thief_player' => 14,
         ));
 
         // Card Decks!
         // Knight
         // Sidequests!
-        $this->sidequestDeck = self::getNew("module.common.deck");
-        $this->sidequestDeck->init('sidequests');
+        $this->sidequests = self::getNew("module.common.deck");
+        $this->sidequests->init('sidequests');
+
+        // Events
+        $this->events = self::getNew("module.common.deck");
+        $this->events->init('events');
+
+        // Treasure
+        $this->treasures = self::getNew("module.common.deck");
+        $this->treasures->init('treasures');
+
 
         // Goblins
         // Monsters!
-        $this->monsterDeck = self::getNew("module.common.deck");
-        $this->monsterDeck->init('monsters');
+        $this->monsters = self::getNew("module.common.deck");
+        $this->monsters->init('monsters');
 
         // Secrets!
-        $this->secretDeck = self::getNew("module.common.deck");
-        $this->secretDeck->init('secrets');
+        $this->secrets = self::getNew("module.common.deck");
+        $this->secrets->init('secrets');
+
+        // Dragon
+        // Powers!
+        $this->powers = self::getNew("module.common.deck");
+        $this->powers->init('powers');
     }
 
     protected function getGameName()
@@ -82,9 +95,12 @@ class VastTheCrystalCaverns extends Table
         // Note: if you added some extra field on "player" table in the database (dbmodel.sql), you can initialize it there.
         $sql = "INSERT INTO player (player_id, player_color, player_canal, player_name, player_avatar) VALUES ";
         $values = array();
+        $player_roles = ['knight_player', 'goblin_player', 'dragon_player', 'cave_player', 'thief_player'];
         foreach ($players as $player_id => $player) {
             $color = array_shift($default_colors);
             $values[] = "('" . $player_id . "','$color','" . $player['player_canal'] . "','" . addslashes($player['player_name']) . "','" . addslashes($player['player_avatar']) . "')";
+            $role = array_shift($player_roles);
+            $this->setGameStateInitialValue($role, $player_id);
         }
         $sql .= implode(',', $values);
         self::DbQuery($sql);
@@ -103,10 +119,60 @@ class VastTheCrystalCaverns extends Table
 
         // TODO: setup the initial game situation here
 
+        // Decks
+        // Knight
+        // Sidequests
+        $sidequest_cards = [];
+        foreach ($this->sidequest_cards as $key => $sidequest_card) {
+            $sidequest_cards[] = array('type' => $key, 'type_arg' => 0, 'nbr' => 1);
+        }
+        $this->sidequests->createCards($sidequest_cards, 'deck');
+        $this->sidequests->shuffle('deck');
+
+        // Events
+        $event_cards = [];
+        foreach ($this->event_cards as $key => $event_card) {
+            $event_cards[] = array('type' => $key, 'type_arg' => 0, 'nbr' => $event_card['copies']);
+        }
+        $this->events->createCards($event_cards, 'deck');
+        $this->events->shuffle('deck');
+
+        // Treasures
+        $treasure_cards = [];
+        foreach ($this->treasure_cards as $key => $treasure_card) {
+            $treasure_cards[] = array('type' => $key, 'type_arg' => 0, 'nbr' => 1);
+        }
+        $this->treasures->createCards($treasure_cards, 'deck');
+        $this->treasures->shuffle('deck');
+
+        // Goblins
+        // Monsters
+        $monster_cards = [];
+        foreach ($this->monster_cards as $key => $monster_card) {
+            $monster_cards[] = array('type' => $key, 'type_arg' => 0, 'nbr' => 1);
+        }
+        $this->monsters->createCards($monster_cards, 'deck');
+        $this->monsters->shuffle('deck');
+
+        // Secrets
+        $secrets_cards = [];
+        foreach ($this->secret_cards as $key => $secret_card) {
+            $secrets_cards[] = array('type' => $key, 'type_arg' => 0, 'nbr' => 1);
+        }
+        $this->secrets->createCards($secrets_cards, 'deck');
+        $this->secrets->shuffle('deck');
+
+        // Dragon
+        // Treasures
+        $power_cards = [];
+        foreach ($this->power_cards as $key => $power_card) {
+            $power_cards[] = array('type' => $key, 'type_arg' => 0, 'nbr' => $power_card['copies']);
+        }
+        $this->powers->createCards($power_cards, 'deck');
+        $this->powers->shuffle('deck');
 
         // Activate first player (which is in general a good idea :) )
         $this->activeNextPlayer();
-
         /************ End of the game initialization *****/
     }
 
@@ -136,16 +202,23 @@ class VastTheCrystalCaverns extends Table
 
         //Knight
         $result['sidequest_cards'] = $this->sidequest_cards;
+        $result['sidequests'] = $this->sidequests->getCardsInLocation("deck");
         $result['event_cards'] = $this->event_cards;
+        $result['events'] = $this->events->getCardsInLocation("deck");
         $result['treasure_cards'] = $this->treasure_cards;
+        $result['treasures'] = $this->treasures->getCardsInLocation("deck");
 
         //Goblins
         $result['war_cards'] = $this->war_cards;
+        $result['wars'] = [];
         $result['monster_cards'] = $this->monster_cards;
+        $result['monsters'] = $this->monsters->getCardsInLocation("deck");
         $result['secret_cards'] = $this->secret_cards;
+        $result['secrets'] = $this->secrets->getCardsInLocation("deck");
 
         //Dragon
         $result['power_cards'] = $this->power_cards;
+        $result['powers'] = $this->powers->getCardsInLocation("deck");
 
 
         // TODO: Gather all information about current game situation (visible by player $current_player_id).

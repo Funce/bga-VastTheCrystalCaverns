@@ -46,20 +46,59 @@
 
 /********* You can start writing your CSS below this line: **********/
 
-/*
-    Example of CSS sprites (a black token and a white token, 20x20px each, embedded in the same "tokens.png" 40x20px image):
+.italic {
+    font-style: italic;
+}
 
-    .white_token {
-        background-image: url('img/tokens.png');
-        background-position: 0px 0px;
-    }
-    .black_token {
-        background-image: url('img/tokens.png');
-        background-position: -20px 0px;
-    }
-    .token {
-        width: 20px;
-        height: 20px;
-        background-repeat: none;
-    }
-*/
+.sidequest {
+    text-align: center;
+    color: rgb(34, 30, 31);
+}
+
+.sidequest p {
+    margin: 0;
+}
+
+.sidequest h3 {
+    position: absolute;
+    right: 13%;
+    left: 13%;
+    font-size: 145%;
+    transform: translateY(-45%);
+    top: 47.5%;
+    font-weight: bold;
+}
+
+.sidequest .description {
+    position: absolute;
+    right: 16%;
+    left: 16%;
+    top: 71%;
+    transform: translateY(-50%);
+    font-size: 82%;
+    color: rgb(255, 255, 255);
+}
+
+.sidequest .quote {
+    font-size: 74.2%;
+    position: absolute;
+    right: 13%;
+    left: 13%;
+    top: 89.5%;
+    transform: translateY(-45%);
+    font-style: italic;
+}
+
+.sidequest .grit_reward {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: 7.2%;
+    top: 3.8%;
+    font-size: 150%;
+    font-weight: bold;
+    text-shadow:
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
