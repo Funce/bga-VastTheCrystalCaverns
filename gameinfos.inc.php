@@ -13,7 +13,7 @@
 $gameinfos = array(
 
     // Name of the game in English (will serve as the basis for translation) 
-    'game_name' => "Vast: The Crystal Caverns",
+    'game_name' => totranslate("Vast: The Crystal Caverns"),
 
     // Game designer (or game designers, separated by commas)
     'designer' => 'Patrick Leder, David Somerville',
