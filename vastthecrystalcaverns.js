@@ -150,7 +150,11 @@ define([
 
 		buildStocks: function () {
 			this.buildSidequestStock()
+			this.buildTreasureStock()
 			this.buildEventStock()
+			this.buildMonsterStock()
+			this.buildSecretStock()
+			this.buildPowerStock()
 		},
 
 		buildSidequestStock: function () {
@@ -205,6 +209,7 @@ define([
 			var tmpobj = {
 				innerHTML: bga_format(_(sidequestInfo.description), {
 					"/": "italic",
+					"*": "bold",
 				}),
 				class: "description",
 			}
@@ -219,6 +224,76 @@ define([
 			var tmpobj = {
 				innerHTML: _(sidequestInfo.reward),
 				class: "grit_reward",
+			}
+			dojo.create("p", tmpobj, card_div)
+		},
+
+		buildTreasureStock: function () {
+			var gamedatas = this.gamedatas
+			this.treasures = new ebg.stock()
+			this.treasures.setSelectionMode(0)
+			this.treasures.item_margin = 5
+			this.treasures.automargin = true
+			this.treasures.image_items_per_row = 7
+			this.treasures.create(this, $("treasures"), 260, 360)
+			this.treasures.onItemCreate = dojo.hitch(this, "setupTreasureCard")
+			for (var treasureCardId in gamedatas.treasures) {
+				var treasure = gamedatas.treasures[treasureCardId]
+				var treasureType = treasure.type
+				if (gamedatas.treasure_cards.hasOwnProperty(treasureType)) {
+					var treasureCard = gamedatas.treasure_cards[treasureType]
+
+					this.treasures.addItemType(
+						treasureCardId,
+						0,
+						g_gamethemeurl + "img/knight_cards.png",
+						treasureCard.sprite
+					)
+					this.treasures.addToStockWithId(
+						treasureCardId,
+						treasureCardId
+					)
+				}
+			}
+		},
+
+		setupTreasureCard: function (card_div, card_type_id, card_id) {
+			console.log("Type: " + card_type_id)
+			console.log("id: " + card_id)
+			dojo.addClass(card_div, "card")
+			dojo.addClass(card_div, "treasure_card")
+			this.createTreasureContent(card_div, card_type_id)
+			// Set up tooltip sometime lmao
+		},
+
+		createTreasureContent: function (card_div, card_type_id) {
+			var treasureCard = this.gamedatas.treasures[card_type_id]
+			var treasureInfo = this.gamedatas.treasure_cards[treasureCard.type]
+			dojo.create(
+				"h3",
+				{ innerHTML: _(treasureInfo.card_name) },
+				card_div
+			)
+
+			var tmpobj = {
+				class: "description",
+			}
+			var desc_holder = dojo.create("div", tmpobj, card_div)
+
+			for (const desc of treasureInfo.description) {
+				var tmpobj = {
+					innerHTML: bga_format(_(desc), {
+						"/": "italic",
+						"*": "bold",
+					}),
+					class: "",
+				}
+				dojo.create("p", tmpobj, desc_holder)
+			}
+
+			var tmpobj = {
+				innerHTML: '"' + _(treasureInfo.quote) + '"',
+				class: "quote",
 			}
 			dojo.create("p", tmpobj, card_div)
 		},
@@ -272,6 +347,7 @@ define([
 				var tmpobj = {
 					innerHTML: bga_format(_(desc), {
 						"/": "italic",
+						"*": "bold",
 					}),
 					class: "",
 				}
@@ -280,6 +356,184 @@ define([
 
 			var tmpobj = {
 				innerHTML: '"' + _(eventInfo.quote[eventCard.type_arg]) + '"',
+				class: "quote",
+			}
+			dojo.create("p", tmpobj, card_div)
+		},
+
+		// War cards (coming soon)
+
+		// Monsters
+		buildMonsterStock: function () {
+			var gamedatas = this.gamedatas
+			this.monsters = new ebg.stock()
+			this.monsters.setSelectionMode(0)
+			this.monsters.item_margin = 5
+			this.monsters.automargin = true
+			this.monsters.image_items_per_row = 6
+			this.monsters.create(this, $("monsters"), 260, 360)
+			this.monsters.onItemCreate = dojo.hitch(this, "setupMonsterCard")
+			for (var monsterCardId in gamedatas.monsters) {
+				var monster = gamedatas.monsters[monsterCardId]
+				var monsterType = monster.type
+				if (gamedatas.monster_cards.hasOwnProperty(monsterType)) {
+					var monsterCard = gamedatas.monster_cards[monsterType]
+
+					this.monsters.addItemType(
+						monsterCardId,
+						0,
+						g_gamethemeurl + "img/goblin_cards.png",
+						monsterCard.sprite
+					)
+					this.monsters.addToStockWithId(monsterCardId, monsterCardId)
+				}
+			}
+		},
+
+		setupMonsterCard: function (card_div, card_type_id, card_id) {
+			console.log("Type: " + card_type_id)
+			console.log("id: " + card_id)
+			dojo.addClass(card_div, "card")
+			dojo.addClass(card_div, "monster_card")
+			this.createMonsterContent(card_div, card_type_id)
+			// Set up tooltip sometime lmao
+		},
+
+		createMonsterContent: function (card_div, card_type_id) {
+			var monsterCard = this.gamedatas.monsters[card_type_id]
+			var monsterInfo = this.gamedatas.monster_cards[monsterCard.type]
+			dojo.create("h3", { innerHTML: _(monsterInfo.card_name) }, card_div)
+
+			var tmpobj = {
+				class: "description",
+			}
+			var desc_holder = dojo.create("div", tmpobj, card_div)
+
+			for (const desc of monsterInfo.description) {
+				var tmpobj = {
+					innerHTML: bga_format(_(desc), {
+						"/": "italic",
+						"*": "bold",
+					}),
+					class: "",
+				}
+				dojo.create("p", tmpobj, desc_holder)
+			}
+
+			var tmpobj = {
+				innerHTML: '"' + _(monsterInfo.quote) + '"',
+				class: "quote",
+			}
+			dojo.create("p", tmpobj, card_div)
+		},
+
+		// Secrets
+		buildSecretStock: function () {
+			var gamedatas = this.gamedatas
+			this.secrets = new ebg.stock()
+			this.secrets.setSelectionMode(0)
+			this.secrets.item_margin = 5
+			this.secrets.automargin = true
+			this.secrets.image_items_per_row = 6
+			this.secrets.create(this, $("secrets"), 260, 360)
+			this.secrets.onItemCreate = dojo.hitch(this, "setupSecretCard")
+			for (var secretCardId in gamedatas.secrets) {
+				var secret = gamedatas.secrets[secretCardId]
+				var secretType = secret.type
+				if (gamedatas.secret_cards.hasOwnProperty(secretType)) {
+					var secretCard = gamedatas.secret_cards[secretType]
+
+					this.secrets.addItemType(
+						secretCardId,
+						0,
+						g_gamethemeurl + "img/goblin_cards.png",
+						secretCard.sprite
+					)
+					this.secrets.addToStockWithId(secretCardId, secretCardId)
+				}
+			}
+		},
+
+		setupSecretCard: function (card_div, card_type_id, card_id) {
+			console.log("Type: " + card_type_id)
+			console.log("id: " + card_id)
+			dojo.addClass(card_div, "card")
+			dojo.addClass(card_div, "secret_card")
+			this.createSecretContent(card_div, card_type_id)
+			// Set up tooltip sometime lmao
+		},
+
+		createSecretContent: function (card_div, card_type_id) {
+			var secretCard = this.gamedatas.secrets[card_type_id]
+			var secretInfo = this.gamedatas.secret_cards[secretCard.type]
+			dojo.create("h3", { innerHTML: _(secretInfo.card_name) }, card_div)
+
+			var tmpobj = {
+				class: "description",
+			}
+			var desc_holder = dojo.create("div", tmpobj, card_div)
+
+			for (const desc of secretInfo.description) {
+				var tmpobj = {
+					innerHTML: bga_format(_(desc), {
+						"/": "italic",
+						"*": "bold",
+					}),
+					class: "",
+				}
+				dojo.create("p", tmpobj, desc_holder)
+			}
+
+			var tmpobj = {
+				innerHTML: '"' + _(secretInfo.quote) + '"',
+				class: "quote",
+			}
+			dojo.create("p", tmpobj, card_div)
+		},
+
+		// Powers
+		buildPowerStock: function () {
+			var gamedatas = this.gamedatas
+			this.powers = new ebg.stock()
+			this.powers.setSelectionMode(0)
+			this.powers.item_margin = 5
+			this.powers.automargin = true
+			this.powers.image_items_per_row = 3
+			this.powers.create(this, $("powers"), 260, 360)
+			this.powers.onItemCreate = dojo.hitch(this, "setupPowerCard")
+			for (var powerCardId in gamedatas.powers) {
+				var power = gamedatas.powers[powerCardId]
+				var powerType = power.type
+				if (gamedatas.power_cards.hasOwnProperty(powerType)) {
+					var powerCard = gamedatas.power_cards[powerType]
+
+					this.powers.addItemType(
+						powerCardId,
+						0,
+						g_gamethemeurl + "img/dragon_cards.png",
+						powerCard.sprite
+					)
+					this.powers.addToStockWithId(powerCardId, powerCardId)
+				}
+			}
+		},
+
+		setupPowerCard: function (card_div, card_type_id, card_id) {
+			console.log("Type: " + card_type_id)
+			console.log("id: " + card_id)
+			dojo.addClass(card_div, "card")
+			dojo.addClass(card_div, "power_card")
+			this.createPowerContent(card_div, card_type_id)
+			// Set up tooltip sometime lmao
+		},
+
+		createPowerContent: function (card_div, card_type_id) {
+			var powerCard = this.gamedatas.powers[card_type_id]
+			var powerInfo = this.gamedatas.power_cards[powerCard.type]
+			dojo.create("h3", { innerHTML: _(powerInfo.card_name) }, card_div)
+
+			var tmpobj = {
+				innerHTML: '"' + _(powerInfo.quote[powerCard.type_arg]) + '"',
 				class: "quote",
 			}
 			dojo.create("p", tmpobj, card_div)

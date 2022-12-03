@@ -252,7 +252,8 @@ $this->treasure_cards = array(
       clienttranslate("When used, your next attack may target the Dragon while he is underground without using a Bomb, and you gain +1 Strength on your next attack. Remove the Javelin from the game after resolving its effects. (/Doesn't require a Hero cube to use. Cannot be used on the same turn as a Bomb./)."),
     ),
     "quote" => clienttranslate("The favorite weapon of Jodbar the Left-Handed. Believed to be lost forever when Jodbar threw it twelve miles on a dare."),
-    "cube_slots" => 0
+    "cube_slots" => 0,
+    "sprite" => 14,
   ),
   "elvish-sword" => array(
     "card_name" => clienttranslate("Elvish Sword"),
@@ -261,7 +262,8 @@ $this->treasure_cards = array(
       clienttranslate("+1 Strength during your turn only."),
     ),
     "quote" => clienttranslate("It appears to be of great antiquity."),
-    "cube_slots" => 1
+    "cube_slots" => 1,
+    "sprite" => 15,
   ),
   "mighty-axe" => array(
     "card_name" => clienttranslate("Mighty Axe"),
@@ -270,7 +272,8 @@ $this->treasure_cards = array(
       clienttranslate("When attacking the Dragon, you may discard the Hero cube on this card to remove another Health. (/Cannot be used with a Bomb. Place the discarded cube on the Discarded Hero Cubes space on your player board./)"),
     ),
     "quote" => clienttranslate("Carved with sigils of great power, and heavy—strangely heavy..."),
-    "cube_slots" => 1
+    "cube_slots" => 1,
+    "sprite" => 16,
   ),
   "potion-kit" => array(
     "card_name" => clienttranslate("Potion Kit"),
@@ -278,7 +281,8 @@ $this->treasure_cards = array(
       clienttranslate("Discard the Hero cube on this card and remove this card from the game to regain 2 Health. (/Place the discarded cube on the Discarded Hero Cubes space on your player board./)"),
     ),
     "quote" => clienttranslate("Comes with recipes for healing salve, the Crystal Cavern Cocktail, and lizardnoodle soup."),
-    "cube_slots" => 1
+    "cube_slots" => 1,
+    "sprite" => 17,
   ),
   "heroic-boots" => array(
     "card_name" => clienttranslate("Heroic Boots"),
@@ -286,7 +290,8 @@ $this->treasure_cards = array(
       clienttranslate("+4 Movement."),
     ),
     "quote" => clienttranslate("Calen the Swift wore these. It seems now the mystery of her disappearance is solved..."),
-    "cube_slots" => 1
+    "cube_slots" => 1,
+    "sprite" => 18,
   ),
   "pixie-lantern" => array(
     "card_name" => clienttranslate("Pixie Lantern"),
@@ -295,16 +300,8 @@ $this->treasure_cards = array(
       clienttranslate("+1 Perception."),
     ),
     "quote" => clienttranslate("It doesn't seem like a good idea to let them out. You know how pixies are."),
-    "cube_slots" => 1
-  ),
-  "pixie-lantern" => array(
-    "card_name" => clienttranslate("Pixie Lantern"),
-    "description" => array(
-      clienttranslate("+1 Movement."),
-      clienttranslate("+1 Perception."),
-    ),
-    "quote" => clienttranslate("It doesn't seem like a good idea to let them out. You know how pixies are."),
-    "cube_slots" => 1
+    "cube_slots" => 1,
+    "sprite" => 5,
   ),
   "enchanted-bow" => array(
     "card_name" => clienttranslate("Enchanted Bow"),
@@ -312,7 +309,8 @@ $this->treasure_cards = array(
       clienttranslate("Shoot the Dragon or Thief up to 5 tiles away in a straight line, even if underground or if there are walls or Dark tiles between. The Dragon chooses and discards Power cards equal in number to your Strength - 1 (Max: 3). The Thief is killed if your Perception is greater than his Stealth. (/May be used before, during, or after movement./)"),
     ),
     "quote" => clienttranslate("Made from the bones of some ancient creature. Oddly warm to the touch."),
-    "cube_slots" => 1
+    "cube_slots" => 1,
+    "sprite" => 12,
   ),
 );
 
@@ -530,7 +528,8 @@ $this->monster_cards = array(
     ),
     "ambush_text" => "",
     "ambush_str" => 2,
-    "quote" => clienttranslate("Joinfollow our tribe! We got a mascot!")
+    "quote" => clienttranslate("Joinfollow our tribe! We got a mascot!"),
+    "sprite" => 1,
   ),
   "ogre" => array(
     "card_name" => clienttranslate("Ogre"),
@@ -539,7 +538,8 @@ $this->monster_cards = array(
     ),
     "ambush_text" => clienttranslate("You must move to an adjacent, unoccupied non-Dark space. Then, place the Ogre's Monster token on the space which caused the ambush, with this card nearby. You must attack and defeat the Ogre to enter the space."),
     "ambush_str" => 4,
-    "quote" => clienttranslate("CRUSHING TIME?")
+    "quote" => clienttranslate("CRUSHING TIME?"),
+    "sprite" => 2,
   ),
   "troll" => array(
     "card_name" => clienttranslate("Troll"),
@@ -548,7 +548,8 @@ $this->monster_cards = array(
     ),
     "ambush_text" => clienttranslate("Place the Canyon tile if it is not already in play (even if you are not using Terrain tiles), then place the Troll's Monster token on the bridge space, with this card nearby. You must fight and defeat the Troll to cross."),
     "ambush_str" => 4,
-    "quote" => clienttranslate("Who's that clank-clanking over my bridge?")
+    "quote" => clienttranslate("Who's that clank-clanking over my bridge?"),
+    "sprite" => 6,
   ),
   "golem" => array(
     "card_name" => clienttranslate("Golem"),
@@ -557,7 +558,8 @@ $this->monster_cards = array(
     ),
     "ambush_text" => clienttranslate("Place the Golem face-up on your player board. For the rest of the game, each use of the Ancient Map requires 2 Hero cubes instead of 1."),
     "ambush_str" => 3,
-    "quote" => clienttranslate("...I... ...O...B...E...Y...")
+    "quote" => clienttranslate("...I... ...O...B...E...Y..."),
+    "sprite" => 7,
   ),
   "gnome" => array(
     "card_name" => clienttranslate("Gnome"),
@@ -567,7 +569,8 @@ $this->monster_cards = array(
     ),
     "ambush_text" => clienttranslate("Discard a Treasure card at random."),
     "ambush_str" => 3,
-    "quote" => clienttranslate("Sneaky is as tricky does, grandpap always used to say!")
+    "quote" => clienttranslate("Sneaky is as tricky does, grandpap always used to say!"),
+    "sprite" => 8,
   ),
   "wisp" => array(
     "card_name" => clienttranslate("Wisp"),
@@ -576,7 +579,8 @@ $this->monster_cards = array(
     ),
     "ambush_text" => "",
     "ambush_str" => -1,
-    "quote" => clienttranslate("...remember me...this way...can you see me...? ...come on, I'll show you...")
+    "quote" => clienttranslate("...remember me...this way...can you see me...? ...come on, I'll show you..."),
+    "sprite" => 3,
   ),
   "bright-beetles" => array(
     "card_name" => clienttranslate("Bright Beetles"),
@@ -585,7 +589,8 @@ $this->monster_cards = array(
     ),
     "ambush_text" => clienttranslate("Place Bright Beetles face-up near the Monster deck. Add +1 STR to the next Monster drawn, then discard Bright Beetles."),
     "ambush_str" => 3,
-    "quote" => clienttranslate("*clk-clk* *skitter*")
+    "quote" => clienttranslate("*clk-clk* *skitter*"),
+    "sprite" => 9,
   ),
   "underworm" => array(
     "card_name" => clienttranslate("Underworm"),
@@ -594,7 +599,8 @@ $this->monster_cards = array(
     ),
     "ambush_text" => clienttranslate("Move diagonally to the nearest Dark tile (place one if needed) and then reveal the tile as part of the same Encounter."),
     "ambush_str" => 2,
-    "quote" => clienttranslate("Walkstep without rhythm, and you won't attractify the worm.")
+    "quote" => clienttranslate("Walkstep without rhythm, and you won't attractify the worm."),
+    "sprite" => 4,
   ),
   "blob" => array(
     "card_name" => clienttranslate("Blob"),
@@ -603,7 +609,8 @@ $this->monster_cards = array(
     ),
     "ambush_text" => clienttranslate("Lose 5 Grit."),
     "ambush_str" => 3,
-    "quote" => clienttranslate("Gluuuuurrrgghhh...")
+    "quote" => clienttranslate("Gluuuuurrrgghhh..."),
+    "sprite" => 10,
   ),
   "flame-giant" => array(
     "card_name" => clienttranslate("Flame Giant"),
@@ -612,7 +619,8 @@ $this->monster_cards = array(
     ),
     "ambush_text" => clienttranslate("If your strength is 3 or lower, you lose another Health."),
     "ambush_str" => 4,
-    "quote" => clienttranslate("Flee fire, foe fum... I smell the blood of a wandering knight.")
+    "quote" => clienttranslate("Flee fire, foe fum... I smell the blood of a wandering knight."),
+    "sprite" => 12,
   ),
 );
 
@@ -623,28 +631,32 @@ $this->secret_cards = array(
     "description" => array(
       clienttranslate("During this turn, whenever you activate a revealed Tribe, you may immediately place its piece on any unoccupied Dark tile. If you do so, you cannot move the Tribe by any other effect this turn, but it may still perform its action."),
     ),
-    "quote" => clienttranslate("Come-along thisaway, sneakylike.")
+    "quote" => clienttranslate("Come-along thisaway, sneakylike."),
+    "sprite" => 13,
   ),
   "cave_in" => array(
     "card_name" => clienttranslate("Cave-In"),
     "description" => array(
       clienttranslate("Collapse a number of tiles up to the Eye Tribe's Population. You cannot collapse tiles containing other players or Crystal tokens."),
     ),
-    "quote" => clienttranslate("Whoopsies.")
+    "quote" => clienttranslate("Whoopsies."),
+    "sprite" => 14,
   ),
   "poison" => array(
     "card_name" => clienttranslate("Poison"),
     "description" => array(
       clienttranslate("When a Tribe uses the Attack action against the Knight, she must also place a Hero cube on the Entrance tile. If the Tribe's Strength was greater than the Knight's by two or more, she places 2 Hero cubes instead. She regains these cubes if she enters the Entrance tile.")
     ),
-    "quote" => clienttranslate("It's an oldtimes family recipe.")
+    "quote" => clienttranslate("It's an oldtimes family recipe."),
+    "sprite" => 15,
   ),
   "leader" => array(
     "card_name" => clienttranslate("Leader"),
     "description" => array(
       clienttranslate("During overpopulation, you may prevent a Tribe from scattering."),
     ),
-    "quote" => clienttranslate("Followchase me, my Tribegoblins! I'll lead us to dinnertime and the glorious afternap!")
+    "quote" => clienttranslate("Followchase me, my Tribegoblins! I'll lead us to dinnertime and the glorious afternap!"),
+    "sprite" => 6,
   ),
   "goblin-ruby" => array(
     "card_name" => clienttranslate("Goblin Ruby"),
@@ -653,21 +665,24 @@ $this->secret_cards = array(
       clienttranslate("*-1 Perception (All Tribes)*"),
       clienttranslate("Once per turn, immediately after drawing War, Monster, or Secrets cards, you may discard and redraw one card. Discard /Goblin Ruby/ when any Tribe's Population decreases to 0."),
     ),
-    "quote" => clienttranslate("Ain't it the prettyshiniest thing you ever did see?")
+    "quote" => clienttranslate("Ain't it the prettyshiniest thing you ever did see?"),
+    "sprite" => 16,
   ),
   "blind-fury" => array(
     "card_name" => clienttranslate("Blind Fury"),
     "description" => array(
       clienttranslate("Pick a Tribe. During this turn, it moves through Lit tiles without losing Population."),
     ),
-    "quote" => clienttranslate("There's nothing to be fearscared of but light itself!")
+    "quote" => clienttranslate("There's nothing to be fearscared of but light itself!"),
+    "sprite" => 11,
   ),
   "fire-bomber" => array(
     "card_name" => clienttranslate("Fire Bomber"),
     "description" => array(
       clienttranslate("Pick a Tribe. During this turn, it gets +2 Strength. If it uses the Attack action during this turn, decrease its Population to 0 after resolving."),
     ),
-    "quote" => clienttranslate("I like it when it goes ticktickticktickticktickBOOM.")
+    "quote" => clienttranslate("I like it when it goes ticktickticktickticktickBOOM."),
+    "sprite" => 17,
   ),
   "hex" => array(
     "card_name" => clienttranslate("Hex"),
@@ -678,7 +693,8 @@ $this->secret_cards = array(
       clienttranslate("*Cave*: Discard /X/ Omen tokens (/Cave chooses/)."),
       clienttranslate("*Thief:* Decrease Stealth by /X/ until the Goblins' next turn."),
     ),
-    "quote" => clienttranslate("Boil, boil and... yeah just keep boiling.")
+    "quote" => clienttranslate("Boil, boil and... yeah just keep boiling."),
+    "sprite" => 18,
   ),
   "trap" => array(
     "card_name" => clienttranslate("Trap"),
@@ -686,14 +702,16 @@ $this->secret_cards = array(
       clienttranslate("Place this card face-up on the table."),
       clienttranslate("When any Tribe is attacked, it gets +1 Strength and +1 Perception until the attack resolves, then discard this card. When any Tribe is targeted by a Dragon power, you may discard this card to ignore that power."),
     ),
-    "quote" => clienttranslate("Oh NO, the bigscary KNIGHT is coming! What are we poorwiddle helpless Gobbies gonna doooo?")
+    "quote" => clienttranslate("Oh NO, the bigscary KNIGHT is coming! What are we poorwiddle helpless Gobbies gonna doooo?"),
+    "sprite" => 19,
   ),
   "hiding-spots" => array(
     "card_name" => clienttranslate("Hiding Spots"),
     "description" => array(
       clienttranslate("A hidden Tribe may use the Attack action against the Knight if she is on or adjacent to an Ambush tile. During this action, do not apply any effects from Monster cards or other Secrets cards."),
     ),
-    "quote" => clienttranslate("Hushquiet! Time for some creepery.")
+    "quote" => clienttranslate("Hushquiet! Time for some creepery."),
+    "sprite" => 20,
   ),
 );
 
@@ -713,6 +731,7 @@ $this->power_cards = array(
       clienttranslate("WwrrRRAaarrrraarrrraar!!"),
     ),
     "copies" => 6,
+    "sprite" => 0,
   ),
   "flame" => array(
     "card_name" => clienttranslate("Flame"),
@@ -725,6 +744,7 @@ $this->power_cards = array(
       clienttranslate("Shhhhsssshhshsssss..."),
     ),
     "copies" => 6,
+    "sprite" => 1,
   ),
   "wing" => array(
     "card_name" => clienttranslate("Wing"),
@@ -737,5 +757,6 @@ $this->power_cards = array(
       clienttranslate("GRA-gra-GRAKK!!"),
     ),
     "copies" => 6,
+    "sprite" => 2,
   ),
 );

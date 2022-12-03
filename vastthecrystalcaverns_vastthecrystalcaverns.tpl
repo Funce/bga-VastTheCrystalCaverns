@@ -31,14 +31,14 @@
     <div id="sidequests"></div>
 </div>
 
-<div id="event_zone" class="cardsZone whiteblock">
-    <h2>Events</h2>
-    <div id="events"></div>
-</div>
-
 <div id="treasure_zone" class="cardsZone whiteblock">
     <h2>Treasures</h2>
     <div id="treasures"></div>
+</div>
+
+<div id="event_zone" class="cardsZone whiteblock">
+    <h2>Events</h2>
+    <div id="events"></div>
 </div>
 
 <div id="war_zone" class="cardsZone whiteblock">
@@ -51,14 +51,14 @@
     <div id="monsters"></div>
 </div>
 
-<div id="treasure_zone" class="cardsZone whiteblock">
-    <h2>Treasures</h2>
-    <div id="treasures"></div>
+<div id="secret_zone" class="cardsZone whiteblock">
+    <h2>Secrets</h2>
+    <div id="secrets"></div>
 </div>
 
 <div id="power_zone" class="cardsZone whiteblock">
     <h2>Power Cards</h2>
-    <div id="power_cards"></div>
+    <div id="powers"></div>
 </div>
 
 <script type="text/javascript">
