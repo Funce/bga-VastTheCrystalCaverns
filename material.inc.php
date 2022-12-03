@@ -184,21 +184,21 @@ $this->sidequest_cards = array(
     "description" => clienttranslate("Reveal this card when 10 or more Cave tiles have been revealed. /Terrain tiles do not count/."),
     "quote" => clienttranslate("Heeeere dragon, dragon, dragon..."),
     "reward" => 3,
-    "sprite" => 6,
+    "sprite" => 1,
   ),
   "daring" => array(
     "card_name" => clienttranslate("Daring"),
     "description" => clienttranslate("Attack a Goblin Tribe with a Monster, attack the Dragon successfully, or attack and kill the Thief."),
     "quote" => clienttranslate("I didn't come all this way to die in the dark!"),
     "reward" => 4,
-    "sprite" => 7,
+    "sprite" => 2,
   ),
   "fearless" => array(
     "card_name" => clienttranslate("Fearless"),
     "description" => clienttranslate("Reveal a Dark tile with a Goblin Tribe on it, then attack the Tribe on the same Encounter. If there is no Goblin player, instead resolve an Ambush tile or /Ambush/ card, attacking a Monster and losing no Health. (/You may draw a Monster instead of fighting Normal or Tough Goblins./)"),
     "quote" => clienttranslate("I don't need to see you to strike you down!"),
     "reward" => 4,
-    "sprite" => 3,
+    "sprite" => 7,
   ),
   "cunning" => array(
     "card_name" => clienttranslate("Cunning"),
@@ -212,35 +212,35 @@ $this->sidequest_cards = array(
     "description" => clienttranslate("Reveal this card when you have at least two face-up Treasure cards."),
     "quote" => clienttranslate("You never know which trinket stands between you and a fiery, painful death, I always say."),
     "reward" => 4,
-    "sprite" => 4,
+    "sprite" => 9,
   ),
   "adventurous" => array(
     "card_name" => clienttranslate("Adventurous"),
     "description" => clienttranslate("Face 3 Encounters, each on a different space, during one turn."),
     "quote" => clienttranslate("Is that all you've got?"),
     "reward" => 6,
-    "sprite" => 1,
+    "sprite" => 3,
   ),
   "swift" => array(
     "card_name" => clienttranslate("Swift"),
     "description" => clienttranslate("Move 7 or more different spaces during one turn."),
     "quote" => clienttranslate("The best defense is a good offense, but when that doesn't work, RUN!"),
     "reward" => 4,
-    "sprite" => 2,
+    "sprite" => 10,
   ),
   "eagle-eyed" => array(
     "card_name" => clienttranslate("Eagle-Eyed"),
     "description" => clienttranslate("Shoot another player with the Bow or the Enchanted Bow."),
     "quote" => clienttranslate("Gotcha!"),
     "reward" => 3,
-    "sprite" => 9,
+    "sprite" => 4,
   ),
   "persistent" => array(
     "card_name" => clienttranslate("Persistent"),
     "description" => clienttranslate("Reveal this card when 3 Crystal tokens have been smashed."),
     "quote" => clienttranslate("Three down, two to go..."),
     "reward" => 4,
-    "sprite" => 5,
+    "sprite" => 11,
   )
 );
 
@@ -330,6 +330,7 @@ $this->event_cards = array(
       clienttranslate("A shadowy ledge, great for sneaking."),
     ),
     "copies" => 4,
+    "sprite" => 19,
   ),
   "light" => array(
     "card_name" => clienttranslate("Light"),
@@ -340,6 +341,7 @@ $this->event_cards = array(
       clienttranslate("A shaft of sunlight from the world above."),
     ),
     "copies" => 1,
+    "sprite" => 21,
   ),
   "vantage-point" => array(
     "card_name" => clienttranslate("Vantage Point"),
@@ -350,6 +352,7 @@ $this->event_cards = array(
       clienttranslate("A high outcropping with a long, clear view."),
     ),
     "copies" => 1,
+    "sprite" => 22,
   ),
   "fresh-air" => array(
     "card_name" => clienttranslate("Fresh Air"),
@@ -360,6 +363,7 @@ $this->event_cards = array(
       clienttranslate("A breeze, smelling of spring air and growing things."),
     ),
     "copies" => 1,
+    "sprite" => 23,
   ),
   "fresh-water" => array(
     "card_name" => clienttranslate("Fresh Water"),
@@ -370,6 +374,7 @@ $this->event_cards = array(
       clienttranslate("A clear, splashing stream, cool and pure."),
     ),
     "copies" => 1,
+    "sprite" => 24,
   ),
   "cave-bread" => array(
     "card_name" => clienttranslate("Cave Bread"),
@@ -380,6 +385,7 @@ $this->event_cards = array(
       clienttranslate("Some old adventurer's rations, strangely unspoiled and heartening."),
     ),
     "copies" => 1,
+    "sprite" => 25,
   ),
   "rats" => array(
     "card_name" => clienttranslate("Rats"),
@@ -390,6 +396,7 @@ $this->event_cards = array(
       clienttranslate("You are bitten by a large and oily rat."),
     ),
     "copies" => 3,
+    "sprite" => 26,
   ),
   "deep-and-dark" => array(
     "card_name" => clienttranslate("Deep and Dark"),
@@ -403,6 +410,7 @@ $this->event_cards = array(
       clienttranslate("A twisty little maze of passages, all alike."),
     ),
     "copies" => 3,
+    "sprite" => 6,
   ),
 );
 

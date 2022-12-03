@@ -27,7 +27,38 @@
 
 
 <div id="sidequest_zone" class="cardsZone whiteblock">
+    <h2>Sidequests</h2>
     <div id="sidequests"></div>
+</div>
+
+<div id="event_zone" class="cardsZone whiteblock">
+    <h2>Events</h2>
+    <div id="events"></div>
+</div>
+
+<div id="treasure_zone" class="cardsZone whiteblock">
+    <h2>Treasures</h2>
+    <div id="treasures"></div>
+</div>
+
+<div id="war_zone" class="cardsZone whiteblock">
+    <h2>War Cards</h2>
+    <div id="war_cards"></div>
+</div>
+
+<div id="monster_zone" class="cardsZone whiteblock">
+    <h2>Monsters</h2>
+    <div id="monsters"></div>
+</div>
+
+<div id="treasure_zone" class="cardsZone whiteblock">
+    <h2>Treasures</h2>
+    <div id="treasures"></div>
+</div>
+
+<div id="power_zone" class="cardsZone whiteblock">
+    <h2>Power Cards</h2>
+    <div id="power_cards"></div>
 </div>
 
 <script type="text/javascript">

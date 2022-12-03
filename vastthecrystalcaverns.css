@@ -50,16 +50,16 @@
     font-style: italic;
 }
 
-.sidequest {
+.card {
     text-align: center;
     color: rgb(34, 30, 31);
 }
 
-.sidequest p {
+.card p {
     margin: 0;
 }
 
-.sidequest h3 {
+.card h3 {
     position: absolute;
     right: 13%;
     left: 13%;
@@ -69,18 +69,18 @@
     font-weight: bold;
 }
 
-.sidequest .description {
+.card .description {
     position: absolute;
-    right: 16%;
-    left: 16%;
-    top: 71%;
+    right: 18%;
+    left: 18%;
+    top: 70%;
     transform: translateY(-50%);
-    font-size: 82%;
+    font-size: 62%;
     color: rgb(255, 255, 255);
 }
 
-.sidequest .quote {
-    font-size: 74.2%;
+.card .quote {
+    font-size: 58%;
     position: absolute;
     right: 13%;
     left: 13%;
@@ -93,7 +93,7 @@
     color: rgb(255, 255, 255);
     position: absolute;
     right: 7.2%;
-    top: 3.8%;
+    top: 3.1%;
     font-size: 150%;
     font-weight: bold;
     text-shadow:

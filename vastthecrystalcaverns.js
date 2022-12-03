@@ -57,31 +57,7 @@ define([
 			// TODO: Set up your game interface here, according to "gamedatas"
 			// Lets get the sidequests showing up!
 
-			this.sidequests = new ebg.stock()
-			this.sidequests.setSelectionMode(0)
-			this.sidequests.item_margin = 5
-			this.sidequests.automargin = true
-			this.sidequests.image_items_per_row = 5
-			this.sidequests.create(this, $("sidequests"), 330, 460)
-			this.sidequests.onItemCreate = dojo.hitch(this, "setupSidequest")
-			for (var sidequestCardId in gamedatas.sidequests) {
-				var sidequest = gamedatas.sidequests[sidequestCardId]
-				var sidequestType = sidequest.type
-				if (gamedatas.sidequest_cards.hasOwnProperty(sidequestType)) {
-					var sidequestCard = gamedatas.sidequest_cards[sidequestType]
-
-					this.sidequests.addItemType(
-						sidequestCardId,
-						0,
-						g_gamethemeurl + "img/sidequests.png",
-						sidequestCard.sprite
-					)
-					this.sidequests.addToStockWithId(
-						sidequestCardId,
-						sidequestType
-					)
-				}
-			}
+			this.buildStocks()
 
 			// Setup game notifications to handle (see "setupNotifications" method below)
 			this.setupNotifications()
@@ -172,24 +148,62 @@ define([
         
         */
 
-		setupSidequest: function (card_div, card_type_id, card_id) {
+		buildStocks: function () {
+			this.buildSidequestStock()
+			this.buildEventStock()
+		},
+
+		buildSidequestStock: function () {
+			var gamedatas = this.gamedatas
+			this.sidequests = new ebg.stock()
+			this.sidequests.setSelectionMode(0)
+			this.sidequests.item_margin = 5
+			this.sidequests.automargin = true
+			this.sidequests.image_items_per_row = 7
+			this.sidequests.create(this, $("sidequests"), 260, 360)
+			this.sidequests.onItemCreate = dojo.hitch(
+				this,
+				"setupSidequestCard"
+			)
+			for (var sidequestCardId in gamedatas.sidequests) {
+				var sidequest = gamedatas.sidequests[sidequestCardId]
+				var sidequestType = sidequest.type
+				if (gamedatas.sidequest_cards.hasOwnProperty(sidequestType)) {
+					var sidequestCard = gamedatas.sidequest_cards[sidequestType]
+
+					this.sidequests.addItemType(
+						sidequestCardId,
+						0,
+						g_gamethemeurl + "img/knight_cards.png",
+						sidequestCard.sprite
+					)
+					this.sidequests.addToStockWithId(
+						sidequestCardId,
+						sidequestCardId
+					)
+				}
+			}
+		},
+
+		setupSidequestCard: function (card_div, card_type_id, card_id) {
+			dojo.addClass(card_div, "card")
 			dojo.addClass(card_div, "sidequest")
-			this.createSideQuestContent(card_div, card_id.split("_")[2])
+			this.createSideQuestContent(card_div, card_type_id)
 			// Set up tooltip sometime lmao
 		},
 
-		createSideQuestContent: function (card_div, card_key) {
-			console.log(card_key)
-			var sidequestCard = this.gamedatas.sidequest_cards[card_key]
-			console.log(sidequestCard)
+		createSideQuestContent: function (card_div, card_type_id) {
+			var sidequestCard = this.gamedatas.sidequests[card_type_id]
+			var sidequestInfo =
+				this.gamedatas.sidequest_cards[sidequestCard.type]
 			dojo.create(
 				"h3",
-				{ innerHTML: _(sidequestCard.card_name) },
+				{ innerHTML: _(sidequestInfo.card_name) },
 				card_div
 			)
 
 			var tmpobj = {
-				innerHTML: bga_format(_(sidequestCard.description), {
+				innerHTML: bga_format(_(sidequestInfo.description), {
 					"/": "italic",
 				}),
 				class: "description",
@@ -197,14 +211,76 @@ define([
 			dojo.create("p", tmpobj, card_div)
 
 			var tmpobj = {
-				innerHTML: '"' + _(sidequestCard.quote) + '"',
+				innerHTML: '"' + _(sidequestInfo.quote) + '"',
 				class: "quote",
 			}
 			dojo.create("p", tmpobj, card_div)
 
 			var tmpobj = {
-				innerHTML: _(sidequestCard.reward),
+				innerHTML: _(sidequestInfo.reward),
 				class: "grit_reward",
+			}
+			dojo.create("p", tmpobj, card_div)
+		},
+
+		buildEventStock: function () {
+			var gamedatas = this.gamedatas
+			this.events = new ebg.stock()
+			this.events.setSelectionMode(0)
+			this.events.item_margin = 5
+			this.events.automargin = true
+			this.events.image_items_per_row = 7
+			this.events.create(this, $("events"), 260, 360)
+			this.events.onItemCreate = dojo.hitch(this, "setupEventCard")
+			for (var eventCardId in gamedatas.events) {
+				var event = gamedatas.events[eventCardId]
+				var eventType = event.type
+				if (gamedatas.event_cards.hasOwnProperty(eventType)) {
+					var eventCard = gamedatas.event_cards[eventType]
+
+					this.events.addItemType(
+						eventCardId,
+						0,
+						g_gamethemeurl + "img/knight_cards.png",
+						eventCard.sprite
+					)
+					this.events.addToStockWithId(eventCardId, eventCardId)
+				}
+			}
+		},
+
+		setupEventCard: function (card_div, card_type_id, card_id) {
+			console.log("Type: " + card_type_id)
+			console.log("id: " + card_id)
+			dojo.addClass(card_div, "card")
+			dojo.addClass(card_div, "event_card")
+			this.createEventContent(card_div, card_type_id)
+			// Set up tooltip sometime lmao
+		},
+
+		createEventContent: function (card_div, card_type_id) {
+			var eventCard = this.gamedatas.events[card_type_id]
+			var eventInfo = this.gamedatas.event_cards[eventCard.type]
+			dojo.create("h3", { innerHTML: _(eventInfo.card_name) }, card_div)
+
+			var tmpobj = {
+				class: "description",
+			}
+			var desc_holder = dojo.create("div", tmpobj, card_div)
+
+			for (const desc of eventInfo.description) {
+				var tmpobj = {
+					innerHTML: bga_format(_(desc), {
+						"/": "italic",
+					}),
+					class: "",
+				}
+				dojo.create("p", tmpobj, desc_holder)
+			}
+
+			var tmpobj = {
+				innerHTML: '"' + _(eventInfo.quote[eventCard.type_arg]) + '"',
+				class: "quote",
 			}
 			dojo.create("p", tmpobj, card_div)
 		},
