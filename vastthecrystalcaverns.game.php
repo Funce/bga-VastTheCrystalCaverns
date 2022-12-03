@@ -241,6 +241,21 @@ class VastTheCrystalCaverns extends Table
         // TODO: compute and return the game progression
 
         return 0;
+
+        // Check which progression is closest!
+
+        // Knight
+        // Dragon must be at 0 health (from 5) (+20% per health lost)
+
+        // Goblins
+        // Knight must be reduced to 0 health (from 7) (+14.3% per health lost)
+
+        // Dragon
+        // Must be awake (11 wakefulness) (+9% per wakefulness gained)
+
+        // Cave
+        // All tiles must have been played to begin the collapse (+50%)
+        // Collapse 5 Crystal Tiles (+10% each)
     }
 
 
